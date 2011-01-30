@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @question.user %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @question.body_markdown %>
+</p>
+
+<p>
+  <b>More:</b>
+  <%= @question.more_markdown %>
+</p>
+
+<p>
+  <b>Reward:</b>
+  <%= @question.reward %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
