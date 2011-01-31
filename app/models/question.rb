@@ -1,9 +1,13 @@
 class Question < ActiveRecord::Base
 
   belongs_to :user
+  has_many :answers, :dependent => :destroy
+    
+  acts_as_taggable
 
   validates_presence_of :body, :message => "can't be blank"
-  validates_length_of :body, :within => 15..140, :message => "must be within 15..140"
+  validates_length_of :body, :minimum => 15
+  validates_length_of :body, :maximum => 140
 
   validates_numericality_of :reward, :message => "is not a number"
 
@@ -18,6 +22,11 @@ class Question < ActiveRecord::Base
     self.body_markdown = body_markdown
     self.more_markdown  = more_markdown
     self.excerpt = truncate(body_markdown.gsub(/<\/?[^>]*>/,  ''), :length => 140)
+  end
+  
+  def add_tags_to_user(user = self.user)
+    user.tag_list.add(self.tag_list)
+    user.save
   end
 
   def calc_amount_sum_and_update_history_max

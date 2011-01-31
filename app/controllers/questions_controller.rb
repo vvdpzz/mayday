@@ -44,9 +44,8 @@ class QuestionsController < ApplicationController
     @question.rendering
 
     respond_to do |format|
-      puts "okokokokokokokokokokokoko"
-      
       if @question.save
+        @question.add_tags_to_user
         format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
@@ -60,8 +59,11 @@ class QuestionsController < ApplicationController
     @question.body = params[:question][:body]
     @question.more = params[:question][:more]
     @question.reward = params[:question][:reward]
+    @question.anonymous = params[:question][:anonymous]
+    @question.rendering
     respond_to do |format|
       if @question.save
+        @question.add_tags_to_user
         format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -78,6 +80,10 @@ class QuestionsController < ApplicationController
       format.html { redirect_to(questions_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def tagged
+    @questions = Question.tagged_with(params[:tag])
   end
   
   protected

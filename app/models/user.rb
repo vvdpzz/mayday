@@ -13,10 +13,18 @@ class User < ActiveRecord::Base
   include Gravtastic
   gravtastic
   
+  acts_as_taggable
+  
   has_many :questions
+  has_many :answers
   
   def afford_to_pay_ask?
-    self.money > APP_CONFIG['ask_charge'].to_i ? true : false
+    self.money >= APP_CONFIG['ask_charge'].to_i ? true : false
+  end
+  
+  def name_and_headline
+    comma = ', ' if self.headline.present?
+    "#{self.name}#{comma}#{self.headline}"
   end
   
 end

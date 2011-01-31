@@ -19,9 +19,16 @@
     <%= f.label :more %><br />
     <%= f.text_area :more %>
   </div>
+	<div class="field">
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
+  </div>
   <div class="field">
     <%= f.label :reward %><br />
     <%= f.text_field :reward %>
+  </div>
+	<div class="field">
+    <%= f.check_box :anonymous %> <%= f.label :anonymous %>
   </div>
   <div class="actions">
     <%= f.submit %>

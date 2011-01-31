@@ -1,7 +1,7 @@
 class AddMoreToUsers < ActiveRecord::Migration
   def self.up
     add_column :users, :name, :string
-    add_column :users, :headline, :string, :default => ""
+    add_column :users, :headline, :string
     add_column :users, :money, :integer, :default => 0
   end
 

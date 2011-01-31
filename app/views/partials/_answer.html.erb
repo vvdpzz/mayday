@@ -1,0 +1,13 @@
+<%= div_for answer do %>
+	<h3><%= answer.user.name_and_headline %></h3>
+	<div class="article">
+		<%= safe_html answer.body_markdown %>
+	</div>
+	<div class="links">
+		<%= link_to 'Add comment', '#' %>
+		<span class="bullet"> · </span>
+		<%= link_to 'Edit', [:edit,answer.question,answer] %>
+		<span class="bullet"> · </span>
+		<span class="timestamp"><%= time_ago_in_words answer.created_at %> ago</span>
+	</div>
+<% end %>

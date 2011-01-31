@@ -1,25 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>User:</b>
-  <%= @question.user %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @question.body_markdown %>
-</p>
-
-<p>
-  <b>More:</b>
-  <%= @question.more_markdown %>
-</p>
-
-<p>
-  <b>Reward:</b>
-  <%= @question.reward %>
-</p>
-
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<div id="content">
+	<%= div_for @question do %>
+		<h1><%= safe_html @question.body_markdown %></h1>
+		<div>
+			<%= safe_html @question.more_markdown %>
+		</div>
+		<div class="status">
+			<span class="tags"><%= @question.tag_list.map{|tag| content_tag(:a, tag, :href => tagged_url(:tag => tag), :class => 'tag')}.to_sentence.html_safe %></span>
+			<span class="bullet"> · </span>
+			<span class="history_max"><%= pluralize(@question.history_max, "cent") %></span>
+			<span class="bullet"> · </span>
+			<span class="answer_count"><%= pluralize(@question.answers.count, "answer") %></span>
+			<span class="bullet"> · </span>
+			<span class="timestamp"><%= time_ago_in_words @question.created_at %> ago</span>
+		</div>
+		<div class="links">
+			<%= link_to 'Add comment', '#' %>
+			<span class="bullet"> · </span>
+			<%= link_to 'Edit', edit_question_path(@question) %>
+		</div>
+	<% end %>
+	<div id="answers">
+		<%= render :partial => 'partials/answer', :collection => @question.answers %>
+	</div>
+	<h3>Add Answer</h3>
+	<%= render @answer = @question.answers.build %>
+</div>
