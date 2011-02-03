@@ -26,6 +26,7 @@ class AnswersController < ApplicationController
     respond_to do |format|
       if @answer.save
         @answer.question.add_tags_to_user(current_user)
+        @answer.charge
         
         format.html { redirect_to(@question, :notice => 'Answer was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @answer }

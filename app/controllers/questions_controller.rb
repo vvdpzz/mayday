@@ -46,6 +46,7 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
         @question.add_tags_to_user
+        @question.charge
         format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
@@ -56,14 +57,19 @@ class QuestionsController < ApplicationController
   end
 
   def update
+    
+    offset = params[:question][:reward].to_i - @question.reward
+    
     @question.body = params[:question][:body]
     @question.more = params[:question][:more]
     @question.reward = params[:question][:reward]
     @question.anonymous = params[:question][:anonymous]
     @question.rendering
+    
     respond_to do |format|
       if @question.save
         @question.add_tags_to_user
+        @question.charge(reward = offset) if offset > 0
         format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
         format.xml  { head :ok }
       else

@@ -7,6 +7,13 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div id="header">
+		<div id="logo">Mayday.fm</div>
+		<ul id="nav">
+			<li><%= link_to_unless_current 'Questions', questions_path %></li>
+			<li><%= link_to_unless_current 'New Question', new_question_path %></li>
+		</ul>
+	</div>
 <div id="notice"><%= notice %></div>
 <%= yield %>
 </body>

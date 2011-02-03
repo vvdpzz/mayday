@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   
   has_many :questions
   has_many :answers
+  has_many :records
   
   def afford_to_pay_ask?
     self.money >= APP_CONFIG['ask_charge'].to_i ? true : false

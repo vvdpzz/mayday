@@ -24,6 +24,40 @@ class Question < ActiveRecord::Base
     self.excerpt = truncate(body_markdown.gsub(/<\/?[^>]*>/,  ''), :length => 140)
   end
   
+  def charge(reward = self.reward)
+    deduction(self.user, APP_CONFIG['ask_charge'].to_i, reward, 0)
+    accounting_ask
+    accounting_reward reward
+  end
+  
+  def deduction(user, ask, reward, answer)
+    sum = ask + reward + answer
+    user.update_attribute(:money, user.money - sum)
+    calc_amount_sum_and_update_history_max
+  end
+  
+  def accounting(user, iotype, amount, payee, payer, caption, remark, status)
+    user.records.create(
+      :iotype => iotype,
+      :amount => amount,
+      :payee => payee.class.to_s,
+      :payee_id => payee.id,
+      :payer => payer.class.to_s,
+      :payer_id => payer.id,
+      :caption => caption,
+      :remark => truncate(remark),
+      :status => status
+    )
+  end
+  
+  def accounting_ask
+    accounting(self.user, false, APP_CONFIG['ask_charge'].to_i, User.first, self.user, 'ask', self.excerpt, 'success')
+  end
+  
+  def accounting_reward(reward)
+    accounting(self.user, false, reward, self, self.user, 'reward', self.excerpt, 'pending') if self.reward > 0
+  end
+  
   def add_tags_to_user(user = self.user)
     user.tag_list.add(self.tag_list)
     user.save

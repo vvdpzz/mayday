@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110131053812) do
+ActiveRecord::Schema.define(:version => 20110131174251) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
@@ -40,6 +40,23 @@ ActiveRecord::Schema.define(:version => 20110131053812) do
     t.integer  "history_max",        :default => 0
     t.boolean  "anonymous",          :default => false
     t.integer  "accepted_answer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
+
+  create_table "records", :force => true do |t|
+    t.integer  "user_id"
+    t.boolean  "iotype"
+    t.integer  "amount"
+    t.string   "payee"
+    t.integer  "payee_id"
+    t.string   "payer"
+    t.integer  "payer_id"
+    t.string   "caption"
+    t.string   "remark"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,7 +93,7 @@ ActiveRecord::Schema.define(:version => 20110131053812) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "headline",                            :default => ""
+    t.string   "headline"
     t.integer  "money",                               :default => 0
   end
 

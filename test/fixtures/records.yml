@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  type: false
+  amount: 1
+  payee: MyString
+  payee_id: 1
+  payer: MyString
+  payer_id: 1
+  caption: MyString
+  remark: MyString
+
+two:
+  user: 
+  type: false
+  amount: 1
+  payee: MyString
+  payee_id: 1
+  payer: MyString
+  payer_id: 1
+  caption: MyString
+  remark: MyString
