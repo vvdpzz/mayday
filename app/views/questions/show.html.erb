@@ -14,10 +14,14 @@
 			<span class="timestamp"><%= time_ago_in_words @question.created_at %> ago</span>
 		</div>
 		<div class="links">
-			<%= link_to 'Add comment', '#' %>
+			<%= link_to 'Add comment', new_question_comment_url(:question_id => @question.id), :remote => true %>
 			<span class="bullet"> · </span>
 			<%= link_to 'Edit', edit_question_path(@question) %>
 		</div>
+		<div class="comments">
+			<%= render :partial => "partials/comment", :collection => @question.comments %>
+		</div>
+		<%= render "comments/comment", :commentable => @question %>
 	<% end %>
 	<div id="answers">
 		<%= render :partial => 'partials/answer', :collection => @question.answers %>

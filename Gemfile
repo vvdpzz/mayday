@@ -11,4 +11,5 @@ group :development, :test do
   gem 'gravtastic'
   gem 'jquery-rails'
   gem 'rails3-jquery-autocomplete'
+  gem 'acts_as_commentable'
 end

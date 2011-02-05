@@ -23,7 +23,7 @@ a{color:#2276BB;text-decoration:none;}
 a:hover{text-decoration:underline;}
 a:visited{}
 /* form */
-.field textarea,input[type="text"]{
+.field textarea, .field input[type="text"]{
 	width:480px;
 }
 .field textarea{
@@ -91,4 +91,23 @@ a.tag{
 }
 .links{
 	margin:10px 0;
+}
+#new_comment{
+	display:none;
+}
+.comments{
+	margin:10px 0;
+	font-size:12px;
+}
+.comment:first-child{
+	margin-top:0;
+}
+.comment{
+	background:url(/images/comment.gif) no-repeat 0 2px;
+	padding-left:20px;
+	margin-top:5px;
+}
+.comment .post_text{
+	font-size:12px;
+	color:#888;
 }

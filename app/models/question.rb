@@ -2,8 +2,10 @@ class Question < ActiveRecord::Base
 
   belongs_to :user
   has_many :answers, :dependent => :destroy
-    
+  
   acts_as_taggable
+  
+  acts_as_commentable
 
   validates_presence_of :body, :message => "can't be blank"
   validates_length_of :body, :minimum => 15

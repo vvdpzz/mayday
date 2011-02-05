@@ -1,0 +1,4 @@
+$("#<%= @instance.class.name.downcase %>_<%= @instance.id %> #new_comment")[0].reset();
+$("#<%= @instance.class.name.downcase %>_<%= @instance.id %> .comments").append(
+	"<%= escape_javascript(render 'partials/comment', :comment => @comment)%>"
+);

@@ -2,6 +2,8 @@ class Answer < ActiveRecord::Base
   belongs_to :user
   belongs_to :question
   
+  acts_as_commentable
+  
   validates_presence_of :body, :message => "can't be blank"
   validates_length_of :body, :minimum => 15
   

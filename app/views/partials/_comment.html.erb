@@ -1,0 +1,9 @@
+<%= div_for comment do %>
+	<div class="post_text">
+		<div>
+			<%= safe_html comment.body %> - 
+			<span class="username"><%= comment.user.name %></span>
+			<span class="post_timestamp"><%= comment.created_at.strftime("%l:%M %p").downcase %></span>
+		</div>
+	</div>
+<% end %>
