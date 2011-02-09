@@ -1,6 +1,14 @@
 module AnswersHelper
   
-  def add_commentable_to(answer)
+  def accepted(answer)
+    if answer.question.status != "accepted"
+      return link_to('Set as Correct', accept_url(:id => answer.question.id, :answer_id => answer.id))
+    else
+      return nil
+    end
+  end
+  
+  def add_commentable_to_answer(answer)
     if user_signed_in?
       return link_to('Add comment', new_answer_comment_url(:answer_id => answer.id), :remote => true)
     else
@@ -8,7 +16,7 @@ module AnswersHelper
     end
   end
   
-  def editable_by(answer)
+  def editable_by_answer(answer)
     if answer.editable_by?(current_user)
       return link_to('Edit', [:edit, answer.question,answer])
     else
@@ -17,7 +25,7 @@ module AnswersHelper
   end
   
   def links(answer)
-    [add_commentable_to(answer), editable_by(answer), timestamp(answer)].compact.join(delimitor).to_s.html_safe
+    [accepted(answer), add_commentable_to_answer(answer), editable_by_answer(answer), timestamp(answer)].compact.join(delimitor).to_s.html_safe
   end
   
 end

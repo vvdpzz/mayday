@@ -1,6 +1,6 @@
 module QuestionsHelper
   
-  def add_commentable_to(question)
+  def add_commentable_to_question(question)
     if user_signed_in?
       return link_to('Add comment', new_question_comment_url(:question_id => question.id), :remote => true)
     else
@@ -8,7 +8,7 @@ module QuestionsHelper
     end
   end
   
-  def editable_by(question)
+  def editable_by_question(question)
     if question.editable_by?(current_user)
       return link_to('Edit', [:edit, question])
     else
@@ -16,8 +16,8 @@ module QuestionsHelper
     end
   end
   
-  def links(question)
-    [add_commentable_to(question), editable_by(question), timestamp(question)].compact.join(delimitor).to_s.html_safe
+  def links_for_question(question)
+    [add_commentable_to_question(question), editable_by_question(question), timestamp(question)].compact.join(delimitor).to_s.html_safe
   end
   
   def history_max(question)

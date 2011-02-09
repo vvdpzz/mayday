@@ -8,7 +8,7 @@
 			<%= question_status @question %>
 		</div>
 		<div class="links">
-			<%= links @question %>
+			<%= links_for_question @question %>
 		</div>
 		<div class="comments">
 			<%= render :partial => "partials/comment", :collection => @question.comments %>

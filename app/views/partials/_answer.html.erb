@@ -4,10 +4,6 @@
 		<%= safe_html answer.body_markdown %>
 	</div>
 	<div class="links">
-		<% if answer.question.status != "accepted" %>
-			<%= link_to 'Set as Correct', accept_url(:id => answer.question.id, :answer_id => answer.id) %>
-			<span class="bullet"> · </span>
-		<% end %>
 		<%= links answer %>
 	</div>
 	<div class="comments">
