@@ -9,6 +9,10 @@ class Answer < ActiveRecord::Base
   
   validate :afford_to_pay_answer, :on => :create
   
+  def editable_by?(user)
+    user && (self.user == user)
+  end
+  
   def rendering
     body_markdown = BlueCloth.new(self.body).to_html
     self.body_markdown = body_markdown

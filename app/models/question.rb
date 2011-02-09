@@ -17,6 +17,10 @@ class Question < ActiveRecord::Base
   validate :afford_to_pay_reward, :on => :create
   
   validate :could_modify_reward, :on => :update
+  
+  def editable_by?(user)
+    user && (self.user == user)
+  end
 
   def rendering
     body_markdown = BlueCloth.new(self.body).to_html
@@ -58,6 +62,11 @@ class Question < ActiveRecord::Base
   
   def accounting_reward(reward)
     accounting(self.user, false, reward, self, self.user, 'reward', self.excerpt, 'pending') if self.reward > 0
+  end
+  
+  def accounting_accepted(user_id)
+    user = User.find_by_id(user_id.to_i)
+    accounting(user, true, self.amount_sum, user, self.user, 'accepted', self.excerpt, 'success')
   end
   
   def add_tags_to_user(user = self.user)

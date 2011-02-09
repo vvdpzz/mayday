@@ -27,6 +27,8 @@ class AnswersController < ApplicationController
       if @answer.save
         @answer.question.add_tags_to_user(current_user)
         @answer.charge
+                
+        @question.update_attribute(:status, "answered") if @question.status == "unanswered"
         
         format.html { redirect_to(@question, :notice => 'Answer was successfully created.') }
         format.xml  { render :xml => @question, :status => :created, :location => @answer }

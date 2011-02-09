@@ -24,8 +24,7 @@ class User < ActiveRecord::Base
   end
   
   def name_and_headline
-    comma = ', ' if self.headline.present?
-    "#{self.name}#{comma}#{self.headline}"
+    [self.name, self.headline].compact.join(',').to_s
   end
   
 end

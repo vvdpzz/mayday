@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   
   before_filter :authenticate_user!, :except => [:index, :show]
   
-  before_filter :find_my_question, :only => [:edit, :update, :destroy]
+  before_filter :find_my_question, :only => [:edit, :update, :destroy, :accept]
 
   def index
     @questions = Question.all
@@ -90,6 +90,21 @@ class QuestionsController < ApplicationController
   
   def tagged
     @questions = Question.tagged_with(params[:tag])
+  end
+  
+  def accept
+    answer = Answer.find params[:answer_id]
+    @question.accepted_answer_id = params[:answer_id]
+    @question.status = "accepted"
+    if @question.save
+      answer.user.update_attribute(:money, answer.user.money + @question.amount_sum)
+      @question.accounting_accepted(answer.user.id)
+      records = @question.user.records.where(:caption => "reward", :status => "pending", :payee_id => @question.id)
+      records.each do |record|
+        record.update_attribute(:status, "success") if record.status == "pending"
+      end
+      redirect_to @question
+    end
   end
   
   protected

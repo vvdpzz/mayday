@@ -1,22 +1,14 @@
 <div id="content">
-	<%= div_for @question do %>
+	<%= div_for(@question, :class => "clearfix") do %>
 		<h1><%= safe_html @question.body_markdown %></h1>
 		<div>
 			<%= safe_html @question.more_markdown %>
 		</div>
 		<div class="status">
-			<span class="tags"><%= @question.tag_list.map{|tag| content_tag(:a, tag, :href => tagged_url(:tag => tag), :class => 'tag')}.to_sentence.html_safe %></span>
-			<span class="bullet"> · </span>
-			<span class="history_max"><%= pluralize(@question.history_max, "cent") %></span>
-			<span class="bullet"> · </span>
-			<span class="answer_count"><%= pluralize(@question.answers.count, "answer") %></span>
-			<span class="bullet"> · </span>
-			<span class="timestamp"><%= time_ago_in_words @question.created_at %> ago</span>
+			<%= question_status @question %>
 		</div>
 		<div class="links">
-			<%= link_to 'Add comment', new_question_comment_url(:question_id => @question.id), :remote => true %>
-			<span class="bullet"> · </span>
-			<%= link_to 'Edit', edit_question_path(@question) %>
+			<%= links @question %>
 		</div>
 		<div class="comments">
 			<%= render :partial => "partials/comment", :collection => @question.comments %>
@@ -24,6 +16,9 @@
 		<%= render "comments/comment", :commentable => @question %>
 	<% end %>
 	<div id="answers">
+		<div class="subheader">
+			<h1><%= pluralize(@question.answers.count, "answer") %></h1>
+		</div>
 		<%= render :partial => 'partials/answer', :collection => @question.answers %>
 	</div>
 	<h3>Add Answer</h3>

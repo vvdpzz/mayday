@@ -1,14 +1,14 @@
-<%= div_for answer do %>
+<%= div_for(answer, :class => (answer.id == answer.question.accepted_answer_id) ? 'correct' : '') do %>
 	<h3><%= answer.user.name_and_headline %></h3>
 	<div class="article">
 		<%= safe_html answer.body_markdown %>
 	</div>
 	<div class="links">
-		<%= link_to 'Add comment', new_answer_comment_url(:answer_id => answer.id), :remote => true %>
-		<span class="bullet"> · </span>
-		<%= link_to 'Edit', [:edit, answer.question,answer] %>
-		<span class="bullet"> · </span>
-		<span class="timestamp"><%= time_ago_in_words answer.created_at %> ago</span>
+		<% if answer.question.status != "accepted" %>
+			<%= link_to 'Set as Correct', accept_url(:id => answer.question.id, :answer_id => answer.id) %>
+			<span class="bullet"> · </span>
+		<% end %>
+		<%= links answer %>
 	</div>
 	<div class="comments">
 		<%= render :partial => "partials/comment", :collection => answer.comments %>

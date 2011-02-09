@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  before_filter :authenticate_user!
   before_filter :who_called_comment
 
   def new
@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @instance.comments.create(:user_id => current_user.id, :body => params[:comment][:body])
-    
   end
 
   protected
