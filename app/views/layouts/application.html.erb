@@ -7,7 +7,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-	<div id="header">
+	<div id="header" class='clearfix'>
+		<% if user_signed_in? %>
+			<%= link_to current_user.name, current_user %> | 
+			<%= link_to "Sign out", destroy_user_session_path %>
+		<% else %>
+			<%= link_to "Sign up", new_user_registration_path %> | 
+			<%= link_to "Sign in", new_user_session_path %>
+		<% end %>
 		<div id="logo">Mayday.fm</div>
 		<ul id="nav">
 			<li><%= link_to_unless_current 'Questions', questions_path %></li>

@@ -10,7 +10,7 @@ module ApplicationHelper
   end
   
   def timestamp(obj)
-    content_tag(:span, time_ago_in_words(obj.created_at) + ' ago', :class => 'timestamp')
+    content_tag(:span, 'Created ' + time_ago_in_words(obj.created_at) + ' ago', :class => 'timestamp')
   end
   
   def tags(question)

@@ -12,4 +12,5 @@ group :development, :test do
   gem 'jquery-rails'
   gem 'rails3-jquery-autocomplete'
   gem 'acts_as_commentable'
+  gem 'activemerchant'
 end
