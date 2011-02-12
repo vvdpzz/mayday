@@ -43,6 +43,7 @@ pre{
 }
 .field textarea{
 	height:5em;
+	overflow:auto;
 }
 /* nav */
 #header{
