@@ -9,7 +9,10 @@ gem 'gravtastic'
 gem 'jquery-rails'
 gem 'rails3-jquery-autocomplete'
 gem 'acts_as_commentable'
+gem 'compass'
+gem 'haml'
 gem 'activemerchant'
+gem 'activemerchant_patch_for_china'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
