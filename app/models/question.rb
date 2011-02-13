@@ -29,7 +29,7 @@ class Question < ActiveRecord::Base
     more_markdown = BlueCloth.new(self.more).to_html
     self.body_markdown = body_markdown
     self.more_markdown  = more_markdown
-    self.excerpt = truncate(body_markdown.gsub(/<\/?[^>]*>/,  ''), :length => 140)
+    self.excerpt = Helper.truncate(body_markdown.gsub(/<\/?[^>]*>/,  ''), :length => 140)
   end
   
   def charge(reward = self.reward)
@@ -44,31 +44,17 @@ class Question < ActiveRecord::Base
     calc_amount_sum_and_update_history_max
   end
   
-  def accounting(user, iotype, amount, payee, payer, caption, remark, status)
-    user.records.create(
-      :iotype => iotype,
-      :amount => amount,
-      :payee => payee.class.to_s,
-      :payee_id => payee.id,
-      :payer => payer.class.to_s,
-      :payer_id => payer.id,
-      :caption => caption,
-      :remark => truncate(remark),
-      :status => status
-    )
-  end
-  
   def accounting_ask
-    accounting(self.user, false, APP_CONFIG['ask_charge'].to_i, User.first, self.user, 'ask', self.excerpt, 'success')
+    Record.accounting(self.user, false, APP_CONFIG['ask_charge'].to_i, User.first, self.user, 'ask', self.excerpt, 'success')
   end
   
   def accounting_reward(reward)
-    accounting(self.user, false, reward, self, self.user, 'reward', self.excerpt, 'pending') if self.reward > 0
+    Record.accounting(self.user, false, reward, self, self.user, 'reward', self.excerpt, 'pending') if self.reward > 0
   end
   
   def accounting_accepted(user_id)
     user = User.find_by_id(user_id.to_i)
-    accounting(user, true, self.amount_sum, user, self.user, 'accepted', self.excerpt, 'success')
+    Record.accounting(user, true, self.amount_sum, user, self.user, 'accepted', self.excerpt, 'success')
   end
   
   def add_tags_to_user(user = self.user)
@@ -102,11 +88,6 @@ class Question < ActiveRecord::Base
     else
       errors.add(:reward, "you can't decrease the reward. please undo modification.")
     end
-  end
-  
-  def truncate(text, options = {})
-    options.reverse_merge!(:length => 30)
-    text.truncate(options.delete(:length), options) if text
   end
 
 end

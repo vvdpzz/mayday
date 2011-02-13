@@ -16,7 +16,7 @@ class Answer < ActiveRecord::Base
   def rendering
     body_markdown = BlueCloth.new(self.body).to_html
     self.body_markdown = body_markdown
-    self.excerpt = truncate(body_markdown.gsub(/<\/?[^>]*>/,  ''), :length => 140)
+    self.excerpt = Helper.truncate(body_markdown.gsub(/<\/?[^>]*>/,  ''), :length => 140)
   end
   
   def charge
@@ -31,15 +31,11 @@ class Answer < ActiveRecord::Base
   end
   
   def accounting_answer
-    self.question.accounting(self.user, false, APP_CONFIG['answer_charge'].to_i, self.question, self.user, 'answer', self.excerpt, 'success')
+    Record.accounting(self.user, false, APP_CONFIG['answer_charge'].to_i, self.question, self.user, 'answer', self.excerpt, 'success')
   end
   
   def afford_to_pay_answer
     errors.add_to_base("You do not have enough money to pay, please recharge.") if self.user.money < APP_CONFIG['answer_charge'].to_i
   end
-  
-  def truncate(text, options = {})
-    options.reverse_merge!(:length => 30)
-    text.truncate(options.delete(:length), options) if text
-  end
+
 end
