@@ -5,21 +5,21 @@ class QuestionsController < ApplicationController
   before_filter :find_my_question, :only => [:edit, :update, :destroy, :accept]
 
   def index
-    @questions = Question.all
-
-    respond_to do |format|
-      format.html
-      format.xml  { render :xml => @questions }
-    end
+    @questions = Question.latest.paginate :page => params[:page]
+    # 
+    # respond_to do |format|
+    #   format.html
+    #   format.xml  { render :xml => @questions }
+    # end
   end
 
   def show
     @question = Question.find(params[:id])
-
-    respond_to do |format|
-      format.html
-      format.xml  { render :xml => @question }
-    end
+    # 
+    # respond_to do |format|
+    #   format.html
+    #   format.xml  { render :xml => @question }
+    # end
   end
 
   def new
@@ -28,7 +28,6 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if current_user.afford_to_pay_ask?
         format.html
-        format.xml  { render :xml => @question }
       else
         format.html { redirect_to(questions_url, :notice => 'You do not have enough money to pay ask charge. Please recharge.') }
       end
@@ -48,10 +47,8 @@ class QuestionsController < ApplicationController
         @question.add_tags_to_user
         @question.charge
         format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
-        format.xml  { render :xml => @question, :status => :created, :location => @question }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -71,10 +68,8 @@ class QuestionsController < ApplicationController
         @question.add_tags_to_user
         @question.charge(reward = offset) if offset > 0
         format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }
-        format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @question.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -84,7 +79,6 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(questions_url) }
-      format.xml  { head :ok }
     end
   end
   

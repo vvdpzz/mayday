@@ -7,4 +7,3 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 User.create(:name => "greedy", :email => "greedy@gmail.com", :password => "greedy", :password_confirmation => "greedy")
 User.create(:name => "vvdpzz", :email => "vvdpzz@gmail.com", :password => "vvdpzz", :password_confirmation => "vvdpzz")
-User.last.update_attribute(:money, 100)

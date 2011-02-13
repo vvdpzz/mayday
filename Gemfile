@@ -13,6 +13,7 @@ gem 'compass'
 gem 'haml'
 gem 'activemerchant'
 gem 'activemerchant_patch_for_china'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'

@@ -1,0 +1,18 @@
+.subheader
+	%h2 New question
+
+= render 'form'
+
+- content_for :sidebar do
+	%h3= "Current Money: #{@question.user.money}"
+	%h3= "Ask charge: #{APP_CONFIG['ask_charge']}"
+	%h3= "Max Reward: #{@question.user.money - APP_CONFIG['ask_charge']}"
+	%h2 Edit Help
+	%h4 put returns between paragraphs
+	%h4 for linebreak add 2 spaces at end
+	%h4 indent code by 4 spaces
+	%h4 _<i>italic</i>_ or **<b>bold</b>**
+	%h4 quote by placing > at start of line
+	%h4 to make links
+	%div [Mayday](http://mayday.fm)
+	= link_to 'View more tricks', editing_help_index_url

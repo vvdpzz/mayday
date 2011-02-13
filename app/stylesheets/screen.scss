@@ -1,0 +1,211 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page";
+@import "partials/form";
+@import "partials/two_col";
+@import "compass/css3/box-sizing";
+@import "compass/utilities/lists/inline-block-list";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/border-radius";
+
+// Import bluecloth
+@import "partials/bluecloth";
+
+$red: #D20;
+$yellow: #F29905;
+$green: #008C00;
+$link_normal: #4183C4;
+$mono_fonts: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+
+body.bp a{color: $link_normal;text-decoration:none;}
+body.bp a:hover{text-decoration:underline;}
+body.bp a:visited{color: $link_normal;}
+
+#header{
+	margin-bottom:2em;
+}
+
+ul#nav{
+	font-size:x-large;
+	@include inline-block-list(10px);
+}
+
+#new_question, #new_answer{
+	padding:1em;
+	border: 1px solid #E4E4E4;
+	background-color: #F9F9F9;
+	@include border-radius;
+	@include box-sizing(border-box);
+}
+
+#questions{
+	.question{
+		@include clearfix;
+		.stats{
+			float:left;
+			text-align:center;
+			.amt, .ans{
+				line-height:18px;
+			}
+			.amt{
+				color:#666;
+				.count{
+					font-size:24px;
+				}
+			}
+			.unanswered{
+				color: $red;
+			}
+			.answered{
+				color: $yellow;
+			}
+			.accepted{
+				color: $green;
+			}
+		}
+		.summary{
+			margin-left:72px;
+			h3{
+				margin:0;
+				font-size:14px;
+				line-height:1.4;
+			}
+			.answer{
+				h3{
+					color:black;
+				}
+				.excerpt{
+					font-size:13px;
+				}
+			}
+		}
+	}
+}
+.question{
+	h2{
+		p{
+			margin:0;
+			line-height:1.4;
+		}
+	}
+}
+#questions .question, #answers .answer{
+	padding:10px;
+	border-bottom:1px solid #E0E0E0;
+}
+.status, .links{
+	color:#aaa;
+}
+body.bp .subheader{
+	border-bottom:1px solid #CCC;
+	margin-bottom:10px;
+	h2{
+		margin:0;
+	}
+}
+#answers{
+	margin-top:50px;
+	.subheader{
+		border-bottom:1px solid #CCC;
+		h3{
+			line-height:1.6;
+			margin:0;
+		}
+	}
+	.answer{
+		h3{
+			margin-top:0;
+		}
+		.article{
+			font-size:14px;
+		}
+	}
+	h3{
+		margin:1em 0;
+	}
+}
+.field{
+	padding-bottom:8px;
+}
+textarea{
+	height:9em;
+	width:100%;
+}
+textarea, input[type="text"], input[type="password"]{
+	border:1px solid #ccc;
+	@include box-sizing(border-box);
+	font-size:14px;
+	font-family: $mono_fonts;
+}
+input[type="text"], input[type="password"]{
+	padding:5px;
+}
+#question_tag_list{
+	width:100%;
+}
+#new_comment{
+	display:none;
+}
+.comments{
+	margin:10px 0;
+	font-size:12px;
+	color: $alt-text-color;
+}
+.comment:first-child{
+	margin-top:0;
+}
+.comment{
+	background:url(/images/comment.gif) no-repeat 0 4px;
+	padding-left:20px;
+}
+
+.pagination {
+	@include clearfix;
+  background: white;
+	margin:20px 0;
+	a, span, em{
+		padding: .2em .5em;
+    display: inline-block;
+    margin-right: 1px;
+	}
+	span.disabled{
+		color: #999;
+    border: 1px solid #DDD;
+	}
+	em{
+		font-weight: bold;
+    background: #2E6AB1;
+    color: white;
+    border: 1px solid #2E6AB1;
+	}
+	a{
+		text-decoration: none;
+    color: #105CB6;
+    border: 1px solid #9AAFE5;
+	}
+	a:hover, a:focus{
+		color: #003;
+    border-color: #003;
+	}
+	.page_info{
+		background: #2E6AB1;
+    color: white;
+    padding: .4em .6em;
+    width: 22em;
+    margin-bottom: .3em;
+    text-align: center;
+		b{
+			color: #003;
+      background: #6aa6ed;
+      padding: .1em .25em;
+		}
+	}
+}

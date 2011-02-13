@@ -1,0 +1,5 @@
+.subheader
+	%h2 All Questions
+#questions
+	= render :partial => 'partials/question', :collection => @questions
+= will_paginate @questions

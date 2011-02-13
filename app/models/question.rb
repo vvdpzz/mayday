@@ -18,6 +18,8 @@ class Question < ActiveRecord::Base
   
   validate :could_modify_reward, :on => :update
   
+  scope :latest, order("created_at DESC")
+  
   def editable_by?(user)
     user && (self.user == user)
   end

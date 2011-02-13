@@ -1,0 +1,13 @@
+= div_for @question do
+	%h2= safe_html @question.body_markdown
+	%div= safe_html @question.more_markdown
+	.status= question_status @question
+	.links= links_for_question @question
+	.comments= render :partial => "partials/comment", :collection => @question.comments
+	= render "comments/comment", :commentable => @question
+#answers
+	.subheader
+		%h3= pluralize(@question.answers.count, "answer")
+	= render :partial => 'partials/answer', :collection => @question.answers
+	%h3 Add Answer
+	= render @answer = @question.answers.build
