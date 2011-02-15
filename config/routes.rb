@@ -8,6 +8,7 @@ Mayday::Application.routes.draw do
   resources :questions do
     resources :answers, :except => [:index, :show]
     resources :comments, :only => [:new, :create]
+    get :autocomplete_tag_name, :on => :collection
   end
   resources :answers, :except => [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :comments, :only => [:new, :create]

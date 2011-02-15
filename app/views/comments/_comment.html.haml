@@ -1,0 +1,6 @@
+= form_for([commentable, commentable.comments.build], :remote => true) do |f|
+  .field
+    = f.text_area :body
+    %span.text-counter
+  .field
+    = f.submit 'Send'

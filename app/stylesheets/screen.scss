@@ -15,27 +15,38 @@
 @import "compass/utilities/lists/inline-block-list";
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/border-radius";
+@import "compass/css3/transition";
 
 // Import bluecloth
 @import "partials/bluecloth";
+@import "partials/jui";
 
 $red: #D20;
 $yellow: #F29905;
-$green: #008C00;
+$green: #4F8A32;
 $link_normal: #4183C4;
 $mono_fonts: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
 
 body.bp a{color: $link_normal;text-decoration:none;}
 body.bp a:hover{text-decoration:underline;}
 body.bp a:visited{color: $link_normal;}
+body.bp{font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;}
+body.bp ul{list-style-type: none;padding-left:0;}
 
 #header{
 	margin-bottom:2em;
 }
 
 ul#nav{
-	font-size:x-large;
+	font-size:large;
 	@include inline-block-list(10px);
+	li{
+		padding:.3em 1.5em;
+		border:1px solid white;
+	}
+	li:hover{
+		border:1px solid $link_normal;
+	}
 }
 
 #new_question, #new_answer{
@@ -47,16 +58,19 @@ ul#nav{
 }
 
 #questions{
+	border-left:1px solid #D3E1F9;
+	padding-left:8px;
 	.question{
 		@include clearfix;
 		.stats{
 			float:left;
 			text-align:center;
+			padding-top:4px;
 			.amt, .ans{
 				line-height:18px;
 			}
 			.amt{
-				color:#666;
+				color:#AAA;
 				.count{
 					font-size:24px;
 				}
@@ -75,15 +89,26 @@ ul#nav{
 			margin-left:72px;
 			h3{
 				margin:0;
-				font-size:14px;
-				line-height:1.4;
+				font-size:16px;
+				line-height: 19px;
+				a{
+					color: #2F6CA4;
+				}
+				a:hover{
+					color: #71A7D8;
+					@include transition-duration(0.5s);
+					@include transition-timing-function(ease-in);
+					text-decoration: none;
+				}
 			}
 			.answer{
 				h3{
 					color:black;
 				}
 				.excerpt{
+					color: #666;
 					font-size:13px;
+					line-height: 15px;
 				}
 			}
 		}
@@ -93,47 +118,51 @@ ul#nav{
 	h2{
 		p{
 			margin:0;
-			line-height:1.4;
+			font-size:18px;
+			line-height: 22px;
 		}
 	}
+	.article{
+		font-size:14px;
+	}
 }
-#questions .question, #answers .answer{
+#questions .question{
+	border:1px solid white;
 	padding:10px;
-	border-bottom:1px solid #E0E0E0;
+}
+#questions .question:hover{
+	background-color:#EBF2FC;
+	border:1px solid #CDDCF9;
 }
 .status, .links{
 	color:#aaa;
-}
-body.bp .subheader{
-	border-bottom:1px solid #CCC;
-	margin-bottom:10px;
-	h2{
-		margin:0;
-	}
+	padding:4px 0;
 }
 #answers{
 	margin-top:50px;
-	.subheader{
-		border-bottom:1px solid #CCC;
-		h3{
-			line-height:1.6;
-			margin:0;
-		}
-	}
 	.answer{
-		h3{
-			margin-top:0;
+		padding:8px 0;
+		border-bottom:1px solid #E0E0E0;
+		.inner{
+			border-left:3px solid white;
+			padding-left:8px;
+			.article{
+				font-size:14px;
+			}
 		}
-		.article{
-			font-size:14px;
+		.correct{
+			border-left:3px solid $green;
 		}
 	}
-	h3{
-		margin:1em 0;
+	h2{
+		margin:.75em 0;
 	}
 }
 .field{
 	padding-bottom:8px;
+}
+#new_comment .field{
+	padding:2px;
 }
 textarea{
 	height:9em;
@@ -155,7 +184,7 @@ input[type="text"], input[type="password"]{
 	display:none;
 }
 .comments{
-	margin:10px 0;
+	padding:10px 0;
 	font-size:12px;
 	color: $alt-text-color;
 }

@@ -3,6 +3,8 @@ class QuestionsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show, :tagged]
   
   before_filter :find_my_question, :only => [:edit, :update, :destroy, :accept]
+  
+  autocomplete :tag, :name, :full => true
 
   def index
     @questions = Question.latest.paginate :page => params[:page]

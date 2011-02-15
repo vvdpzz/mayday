@@ -1,8 +1,0 @@
-<%= form_for([commentable, commentable.comments.build], :remote => true) do |f| %>
-	<div class="field">
-		<%= f.text_area :body %>
-	</div>
-	<div class="field">
-		<%= f.submit 'Send' %>
-	</div>
-<% end %>
