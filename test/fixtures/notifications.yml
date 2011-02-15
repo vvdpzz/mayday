@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  dude: MyString
+  dude_id: 1
+  what: MyString
+  able: MyString
+  able_id: 1
+  excerpt: MyString
+
+two:
+  user: 
+  dude: MyString
+  dude_id: 1
+  what: MyString
+  able: MyString
+  able_id: 1
+  excerpt: MyString

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110205160116) do
+ActiveRecord::Schema.define(:version => 20110215125950) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
@@ -38,6 +38,19 @@ ActiveRecord::Schema.define(:version => 20110205160116) do
   add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
   add_index "comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "dude"
+    t.integer  "dude_id"
+    t.string   "did_what"
+    t.string   "able"
+    t.integer  "able_id"
+    t.string   "excerpt"
+    t.boolean  "status",     :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "questions", :force => true do |t|
     t.integer  "user_id"

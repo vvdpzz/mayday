@@ -21,6 +21,8 @@
 				%li= link_to_unless_current 'Questions', questions_path
 				%li= link_to_unless_current 'New Question', new_question_path
 			#notice= notice
+			- if user_signed_in? and current_user.notifications.present?
+				#notify= render 'partials/notify'
 		#content
 			= yield
 		#sidebar

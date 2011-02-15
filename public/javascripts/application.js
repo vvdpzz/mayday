@@ -22,8 +22,10 @@ $.fn.extend({
 						h(false)
 					}
 					else {
-						c = (i - d) + " character" + (i - d != 1 ? "s" : "") + " left";
-						h(d <= i)
+						if (i){
+							c = (i - d) + " character" + (i - d != 1 ? "s" : "") + " left";
+							h(d <= i)
+						}
 					}
 				}
 				var f = $(this).parents("form").find("span.text-counter");
@@ -47,10 +49,9 @@ $(document).ready(function() {
 	});
 	$("#answer_body").charCounter({
 	    min: 15,
-	    max: 140,
 	    setIsValid: p
 	});
-	$("#comment_body").charCounter({
+	$(".new_comment textarea").charCounter({
 	    min: 15,
 	    max: 140,
 	    setIsValid: p

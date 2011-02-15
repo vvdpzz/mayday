@@ -1,7 +1,7 @@
 module AnswersHelper
   
   def accepted(answer)
-    if answer.question.status != "accepted"
+    if answer.question.status != "accepted" and current_user and current_user.id == answer.question.user.id
       return link_to('Set as Correct', accept_url(:id => answer.question.id, :answer_id => answer.id))
     else
       return nil

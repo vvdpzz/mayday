@@ -10,16 +10,11 @@ class CommentsController < ApplicationController
   end
 
   protected
-    def who_called_comment
-      if params[:question_id]
-        commentable = "question"
-        id = params[:question_id]
+  def who_called_comment
+    params.each do |name, value|     
+      if name =~ /(.+)_id$/     
+        return @instance = $1.classify.constantize.find(value)     
       end
-      if params[:answer_id]
-        commentable = "answer"
-        id = params[:answer_id]
-      end
-      particular_model = commentable.classify.constantize
-      @instance = particular_model.find id
     end
+  end
 end

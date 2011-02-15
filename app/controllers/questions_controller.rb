@@ -17,6 +17,8 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    
+    current_user.notifications.where(:able => @question.class.to_s, :able_id => @question.id).delete_all if current_user
     # 
     # respond_to do |format|
     #   format.html
