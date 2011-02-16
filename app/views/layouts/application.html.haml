@@ -12,8 +12,12 @@
 	#header_band
 		#header_content
 			%ul#nav
-				%li= link_to_unless_current 'Questions', questions_path
-				%li= link_to_unless_current 'New Question', new_question_path
+				%li
+					= link_to_unless_current 'Questions', questions_path do
+						= link_to 'Questions', questions_path, :class => 'current'
+				%li
+					= link_to_unless_current 'New Question', new_question_path do
+						= link_to 'New Question', new_question_path, :class => 'current'
 			%ul#user_nav
 				- if user_signed_in?
 					%li= link_to current_user.name, current_user

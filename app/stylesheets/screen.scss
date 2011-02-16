@@ -38,7 +38,7 @@ body.bp ul{list-style-type: none;padding-left:0;}
 	background-color: #195695;
 	#header_content{
 		margin: 0px auto;
-		padding: 7px 0px;
+		padding: 7px 0px 9px;
 		width: 950px;
 		@include clearfix;
 	}
@@ -60,17 +60,23 @@ body.bp ul{list-style-type: none;padding-left:0;}
 }
 
 ul#nav{
-	font-size:large;
+	font-size:18px;
 	float:left;
 	@include inline-block-list(8px);
 	li a{
 		color:white;
+		padding:3px 12px;
+	}
+	li a:hover, li a.current{
+		background-color:#164673;
+		@include border-radius(15px);
+		text-decoration:none;
 	}
 }
 ul#user_nav{
 	float:right;
 	@include inline-block-list;
-	margin-top:3px;
+	margin-top:5px;
 	li a{
 		color:white;
 		padding:0 1.5em;
