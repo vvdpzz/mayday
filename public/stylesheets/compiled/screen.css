@@ -1154,49 +1154,63 @@ body.bp .section_header h2 {
 }
 /* line 101, ../../../app/stylesheets/screen.scss */
 #questions .question .stats {
+  display: inline;
   float: left;
+  margin-right: 10px;
+  width: 70px;
   text-align: center;
   padding-top: 4px;
 }
-/* line 105, ../../../app/stylesheets/screen.scss */
+/* line 138, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #questions .question .stats {
+  overflow-x: hidden;
+}
+/* line 106, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt, #questions .question .stats .ans {
   line-height: 18px;
 }
-/* line 108, ../../../app/stylesheets/screen.scss */
+/* line 109, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt {
   color: #AAA;
 }
-/* line 110, ../../../app/stylesheets/screen.scss */
+/* line 111, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt .count {
   font-size: 24px;
 }
-/* line 114, ../../../app/stylesheets/screen.scss */
+/* line 115, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .unanswered {
   color: #dd2200;
 }
-/* line 117, ../../../app/stylesheets/screen.scss */
+/* line 118, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .answered {
   color: #f29905;
 }
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 121, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .accepted {
   color: #4f8a32;
 }
-/* line 124, ../../../app/stylesheets/screen.scss */
+/* line 125, ../../../app/stylesheets/screen.scss */
 #questions .question .summary {
-  margin-left: 72px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 550px;
 }
-/* line 126, ../../../app/stylesheets/screen.scss */
+/* line 138, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #questions .question .summary {
+  overflow-x: hidden;
+}
+/* line 128, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 130, ../../../app/stylesheets/screen.scss */
+/* line 132, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 a {
   color: #2854BB;
 }
-/* line 133, ../../../app/stylesheets/screen.scss */
+/* line 135, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 a:hover {
   color: #71A7D8;
   -moz-transition-duration: 0.5s;
@@ -1209,79 +1223,79 @@ body.bp .section_header h2 {
   transition-timing-function: ease-in;
   text-decoration: none;
 }
-/* line 141, ../../../app/stylesheets/screen.scss */
+/* line 143, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer h3 {
   color: #666;
 }
-/* line 144, ../../../app/stylesheets/screen.scss */
+/* line 146, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer .excerpt {
   color: #666;
   font-size: 13px;
   line-height: 16px;
 }
 
-/* line 155, ../../../app/stylesheets/screen.scss */
+/* line 157, ../../../app/stylesheets/screen.scss */
 .question h2 p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
 }
-/* line 161, ../../../app/stylesheets/screen.scss */
+/* line 163, ../../../app/stylesheets/screen.scss */
 .question .article {
   font-size: 14px;
 }
 
-/* line 165, ../../../app/stylesheets/screen.scss */
+/* line 167, ../../../app/stylesheets/screen.scss */
 #questions .question, #answers .answer {
   padding: 10px 0px;
   border-bottom: 1px solid #ccdcef;
 }
 
-/* line 169, ../../../app/stylesheets/screen.scss */
+/* line 171, ../../../app/stylesheets/screen.scss */
 .status, .links {
   color: #aaa;
   padding: 4px 0;
 }
 
-/* line 173, ../../../app/stylesheets/screen.scss */
+/* line 175, ../../../app/stylesheets/screen.scss */
 #answers {
   margin-top: 50px;
 }
-/* line 176, ../../../app/stylesheets/screen.scss */
+/* line 178, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner {
   border-left: 3px solid white;
   padding-left: 8px;
 }
-/* line 179, ../../../app/stylesheets/screen.scss */
+/* line 181, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner .article {
   font-size: 14px;
 }
-/* line 183, ../../../app/stylesheets/screen.scss */
+/* line 185, ../../../app/stylesheets/screen.scss */
 #answers .answer .correct {
   border-left: 3px solid #4f8a32;
 }
-/* line 187, ../../../app/stylesheets/screen.scss */
+/* line 189, ../../../app/stylesheets/screen.scss */
 #answers > h2 {
   margin: .75em 0;
 }
 
-/* line 191, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 .field {
   padding-bottom: 8px;
 }
 
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 196, ../../../app/stylesheets/screen.scss */
 #new_comment .field {
   padding: 2px;
 }
 
-/* line 197, ../../../app/stylesheets/screen.scss */
+/* line 199, ../../../app/stylesheets/screen.scss */
 textarea {
   height: 9em;
   width: 100%;
 }
 
-/* line 201, ../../../app/stylesheets/screen.scss */
+/* line 203, ../../../app/stylesheets/screen.scss */
 textarea, input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
   -moz-box-sizing: border-box;
@@ -1292,76 +1306,76 @@ textarea, input[type="text"], input[type="password"] {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-/* line 207, ../../../app/stylesheets/screen.scss */
+/* line 209, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
 }
 
-/* line 210, ../../../app/stylesheets/screen.scss */
+/* line 212, ../../../app/stylesheets/screen.scss */
 #question_tag_list {
   width: 100%;
 }
 
-/* line 213, ../../../app/stylesheets/screen.scss */
+/* line 215, ../../../app/stylesheets/screen.scss */
 #new_comment {
   display: none;
 }
 
-/* line 216, ../../../app/stylesheets/screen.scss */
+/* line 218, ../../../app/stylesheets/screen.scss */
 .comments {
   padding: 10px 0;
   font-size: 12px;
   color: #666666;
 }
 
-/* line 221, ../../../app/stylesheets/screen.scss */
+/* line 223, ../../../app/stylesheets/screen.scss */
 .comment:first-child {
   margin-top: 0;
 }
 
-/* line 224, ../../../app/stylesheets/screen.scss */
+/* line 226, ../../../app/stylesheets/screen.scss */
 .comment {
   background: url(/images/comment.gif) no-repeat 0 4px;
   padding-left: 20px;
 }
 
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 231, ../../../app/stylesheets/screen.scss */
 .pagination {
   overflow: hidden;
   *zoom: 1;
   background: white;
   margin: 20px 0;
 }
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 235, ../../../app/stylesheets/screen.scss */
 .pagination a, .pagination span, .pagination em {
   padding: .2em .5em;
   display: inline-block;
   margin-right: 1px;
 }
-/* line 238, ../../../app/stylesheets/screen.scss */
+/* line 240, ../../../app/stylesheets/screen.scss */
 .pagination span.disabled {
   color: #999;
   border: 1px solid #DDD;
 }
-/* line 242, ../../../app/stylesheets/screen.scss */
+/* line 244, ../../../app/stylesheets/screen.scss */
 .pagination em {
   font-weight: bold;
   background: #2E6AB1;
   color: white;
   border: 1px solid #2E6AB1;
 }
-/* line 248, ../../../app/stylesheets/screen.scss */
+/* line 250, ../../../app/stylesheets/screen.scss */
 .pagination a {
   text-decoration: none;
   color: #105CB6;
   border: 1px solid #9AAFE5;
 }
-/* line 253, ../../../app/stylesheets/screen.scss */
+/* line 255, ../../../app/stylesheets/screen.scss */
 .pagination a:hover, .pagination a:focus {
   color: #003;
   border-color: #003;
 }
-/* line 257, ../../../app/stylesheets/screen.scss */
+/* line 259, ../../../app/stylesheets/screen.scss */
 .pagination .page_info {
   background: #2E6AB1;
   color: white;
@@ -1370,7 +1384,7 @@ input[type="text"], input[type="password"] {
   margin-bottom: .3em;
   text-align: center;
 }
-/* line 264, ../../../app/stylesheets/screen.scss */
+/* line 266, ../../../app/stylesheets/screen.scss */
 .pagination .page_info b {
   color: #003;
   background: #6aa6ed;

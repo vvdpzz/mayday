@@ -99,7 +99,8 @@ body.bp .section_header{
 	.question{
 		@include clearfix;
 		.stats{
-			float:left;
+			$stats-columns: floor($blueprint-grid-columns / 12);
+	    @include column($stats-columns);
 			text-align:center;
 			padding-top:4px;
 			.amt, .ans{
@@ -122,7 +123,8 @@ body.bp .section_header{
 			}
 		}
 		.summary{
-			margin-left:72px;
+			$summary-columns: ceil(7 * $blueprint-grid-columns / 12);
+	    @include column($summary-columns, true);
 			h3{
 				margin:0;
 				font-size:14px;
