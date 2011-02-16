@@ -3,8 +3,7 @@
 	.article= safe_html @question.more_markdown
 	.status= question_status @question
 	.links= links_for_question @question
-	- if @question.comments.present?
-		.comments= render :partial => "partials/comment", :collection => @question.comments
+	.comments= render :partial => "partials/comment", :collection => @question.comments
 	= render "comments/comment", :commentable => @question
 #answers
 	.section_header

@@ -5,7 +5,5 @@
       = safe_html answer.body_markdown
     .links
       = links answer
-    - if answer.comments.present?
-      .comments
-        = render :partial => "partials/comment", :collection => answer.comments
+    .comments= render :partial => "partials/comment", :collection => answer.comments
     = render "comments/comment", :commentable => answer
