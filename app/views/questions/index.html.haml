@@ -1,4 +1,5 @@
-%h2 All Questions
+.section_header
+	%h2 All Questions
 #questions
 	= render :partial => 'partials/question', :collection => @questions
 = will_paginate @questions

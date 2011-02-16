@@ -12,6 +12,7 @@ class CreateNotifications < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :notifications, :user_id
   end
 
   def self.down

@@ -3,10 +3,11 @@
 	.article= safe_html @question.more_markdown
 	.status= question_status @question
 	.links= links_for_question @question
-	.comments= render :partial => "partials/comment", :collection => @question.comments
+	- if @question.comments.present?
+		.comments= render :partial => "partials/comment", :collection => @question.comments
 	= render "comments/comment", :commentable => @question
 #answers
-	.subheader
+	.section_header
 		%h2= pluralize(@question.answers.count, "answer")
 	= render :partial => 'partials/answer', :collection => @question.answers
 	%h2 Add Answer

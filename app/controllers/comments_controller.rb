@@ -11,9 +11,9 @@ class CommentsController < ApplicationController
 
   protected
   def who_called_comment
-    params.each do |name, value|     
-      if name =~ /(.+)_id$/     
-        return @instance = $1.classify.constantize.find(value)     
+    params.each do |name, value|
+      if name =~ /(.+)_id$/
+        return @instance = $1.classify.constantize.find(value)
       end
     end
   end

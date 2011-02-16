@@ -993,47 +993,68 @@ pre {
   color: white;
 }
 
-/* line 30, ../../../app/stylesheets/screen.scss */
+/* line 31, ../../../app/stylesheets/screen.scss */
 body.bp a {
-  color: #4183c4;
+  color: #5f88ce;
   text-decoration: none;
 }
 
-/* line 31, ../../../app/stylesheets/screen.scss */
+/* line 32, ../../../app/stylesheets/screen.scss */
 body.bp a:hover {
   text-decoration: underline;
 }
 
-/* line 32, ../../../app/stylesheets/screen.scss */
+/* line 33, ../../../app/stylesheets/screen.scss */
 body.bp a:visited {
-  color: #4183c4;
+  color: #5f88ce;
 }
 
-/* line 33, ../../../app/stylesheets/screen.scss */
+/* line 34, ../../../app/stylesheets/screen.scss */
 body.bp {
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 }
 
-/* line 34, ../../../app/stylesheets/screen.scss */
+/* line 35, ../../../app/stylesheets/screen.scss */
 body.bp ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-/* line 36, ../../../app/stylesheets/screen.scss */
+/* line 37, ../../../app/stylesheets/screen.scss */
+#header_band {
+  background-color: #195695;
+}
+/* line 39, ../../../app/stylesheets/screen.scss */
+#header_band #header_content {
+  margin: 0px auto;
+  padding: 7px 0px;
+  width: 950px;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 47, ../../../app/stylesheets/screen.scss */
 #header {
   margin-bottom: 2em;
 }
-/* line 38, ../../../app/stylesheets/screen.scss */
+/* line 49, ../../../app/stylesheets/screen.scss */
+#header #notice {
+  background-color: #FFF8CC;
+  border: 1px solid #FFE222;
+  padding: 8px;
+  margin: 10px 0;
+}
+/* line 55, ../../../app/stylesheets/screen.scss */
 #header #notify {
   background-color: #EBF2FC;
   border: 1px solid #CDDCF9;
   padding: 8px;
 }
 
-/* line 45, ../../../app/stylesheets/screen.scss */
+/* line 62, ../../../app/stylesheets/screen.scss */
 ul#nav {
   font-size: large;
+  float: left;
   margin: 0;
   padding: 0;
   border: 0;
@@ -1052,24 +1073,52 @@ ul#nav li {
   vertical-align: middle;
   *vertical-align: auto;
   white-space: nowrap;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 /* line 7, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 ul#nav li {
   *display: inline;
 }
-/* line 48, ../../../app/stylesheets/screen.scss */
-ul#nav li {
-  padding: .3em 1.5em;
-  border: 1px solid white;
-}
-/* line 52, ../../../app/stylesheets/screen.scss */
-ul#nav li:hover {
-  border: 1px solid #4183c4;
+/* line 66, ../../../app/stylesheets/screen.scss */
+ul#nav li a {
+  color: white;
 }
 
-/* line 57, ../../../app/stylesheets/screen.scss */
+/* line 70, ../../../app/stylesheets/screen.scss */
+ul#user_nav {
+  float: right;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 3px;
+}
+/* line 46, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_inline-block-list.scss */
+ul#user_nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  white-space: nowrap;
+}
+/* line 7, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+ul#user_nav li {
+  *display: inline;
+}
+/* line 74, ../../../app/stylesheets/screen.scss */
+ul#user_nav li a {
+  color: white;
+  padding: 0 1.5em;
+}
+
+/* line 80, ../../../app/stylesheets/screen.scss */
 #new_question, #new_answer {
   padding: 1em;
   border: 1px solid #E4E4E4;
@@ -1086,61 +1135,68 @@ ul#nav li:hover {
   box-sizing: border-box;
 }
 
-/* line 65, ../../../app/stylesheets/screen.scss */
-#questions {
-  border-left: 1px solid #D3E1F9;
-  padding-left: 8px;
+/* line 88, ../../../app/stylesheets/screen.scss */
+body.bp .section_header {
+  border-bottom: 1px solid #ccdcef;
 }
-/* line 68, ../../../app/stylesheets/screen.scss */
+/* line 90, ../../../app/stylesheets/screen.scss */
+body.bp .section_header h2 {
+  color: #383529;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+/* line 99, ../../../app/stylesheets/screen.scss */
 #questions .question {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 70, ../../../app/stylesheets/screen.scss */
+/* line 101, ../../../app/stylesheets/screen.scss */
 #questions .question .stats {
   float: left;
   text-align: center;
   padding-top: 4px;
 }
-/* line 74, ../../../app/stylesheets/screen.scss */
+/* line 105, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt, #questions .question .stats .ans {
   line-height: 18px;
 }
-/* line 77, ../../../app/stylesheets/screen.scss */
+/* line 108, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt {
   color: #AAA;
 }
-/* line 79, ../../../app/stylesheets/screen.scss */
+/* line 110, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt .count {
   font-size: 24px;
 }
-/* line 83, ../../../app/stylesheets/screen.scss */
+/* line 114, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .unanswered {
   color: #dd2200;
 }
-/* line 86, ../../../app/stylesheets/screen.scss */
+/* line 117, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .answered {
   color: #f29905;
 }
-/* line 89, ../../../app/stylesheets/screen.scss */
+/* line 120, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .accepted {
   color: #4f8a32;
 }
-/* line 93, ../../../app/stylesheets/screen.scss */
+/* line 124, ../../../app/stylesheets/screen.scss */
 #questions .question .summary {
   margin-left: 72px;
 }
-/* line 95, ../../../app/stylesheets/screen.scss */
+/* line 126, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 {
   margin: 0;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 14px;
+  line-height: 18px;
 }
-/* line 99, ../../../app/stylesheets/screen.scss */
+/* line 130, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 a {
-  color: #2F6CA4;
+  color: #2854BB;
 }
-/* line 102, ../../../app/stylesheets/screen.scss */
+/* line 133, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 a:hover {
   color: #71A7D8;
   -moz-transition-duration: 0.5s;
@@ -1153,90 +1209,79 @@ ul#nav li:hover {
   transition-timing-function: ease-in;
   text-decoration: none;
 }
-/* line 110, ../../../app/stylesheets/screen.scss */
+/* line 141, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer h3 {
-  color: black;
+  color: #666;
 }
-/* line 113, ../../../app/stylesheets/screen.scss */
+/* line 144, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer .excerpt {
   color: #666;
   font-size: 13px;
-  line-height: 15px;
+  line-height: 16px;
 }
 
-/* line 124, ../../../app/stylesheets/screen.scss */
+/* line 155, ../../../app/stylesheets/screen.scss */
 .question h2 p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
 }
-/* line 130, ../../../app/stylesheets/screen.scss */
+/* line 161, ../../../app/stylesheets/screen.scss */
 .question .article {
   font-size: 14px;
 }
 
-/* line 134, ../../../app/stylesheets/screen.scss */
-#questions .question {
-  border: 1px solid white;
-  padding: 10px;
+/* line 165, ../../../app/stylesheets/screen.scss */
+#questions .question, #answers .answer {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccdcef;
 }
 
-/* line 138, ../../../app/stylesheets/screen.scss */
-#questions .question:hover {
-  background-color: #EBF2FC;
-  border: 1px solid #CDDCF9;
-}
-
-/* line 142, ../../../app/stylesheets/screen.scss */
+/* line 169, ../../../app/stylesheets/screen.scss */
 .status, .links {
   color: #aaa;
   padding: 4px 0;
 }
 
-/* line 146, ../../../app/stylesheets/screen.scss */
+/* line 173, ../../../app/stylesheets/screen.scss */
 #answers {
   margin-top: 50px;
 }
-/* line 148, ../../../app/stylesheets/screen.scss */
-#answers .answer {
-  padding: 8px 0;
-  border-bottom: 1px solid #E0E0E0;
-}
-/* line 151, ../../../app/stylesheets/screen.scss */
+/* line 176, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner {
   border-left: 3px solid white;
   padding-left: 8px;
 }
-/* line 154, ../../../app/stylesheets/screen.scss */
+/* line 179, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner .article {
   font-size: 14px;
 }
-/* line 158, ../../../app/stylesheets/screen.scss */
+/* line 183, ../../../app/stylesheets/screen.scss */
 #answers .answer .correct {
   border-left: 3px solid #4f8a32;
 }
-/* line 162, ../../../app/stylesheets/screen.scss */
-#answers h2 {
+/* line 187, ../../../app/stylesheets/screen.scss */
+#answers > h2 {
   margin: .75em 0;
 }
 
-/* line 166, ../../../app/stylesheets/screen.scss */
+/* line 191, ../../../app/stylesheets/screen.scss */
 .field {
   padding-bottom: 8px;
 }
 
-/* line 169, ../../../app/stylesheets/screen.scss */
+/* line 194, ../../../app/stylesheets/screen.scss */
 #new_comment .field {
   padding: 2px;
 }
 
-/* line 172, ../../../app/stylesheets/screen.scss */
+/* line 197, ../../../app/stylesheets/screen.scss */
 textarea {
   height: 9em;
   width: 100%;
 }
 
-/* line 176, ../../../app/stylesheets/screen.scss */
+/* line 201, ../../../app/stylesheets/screen.scss */
 textarea, input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
   -moz-box-sizing: border-box;
@@ -1247,76 +1292,76 @@ textarea, input[type="text"], input[type="password"] {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-/* line 182, ../../../app/stylesheets/screen.scss */
+/* line 207, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
 }
 
-/* line 185, ../../../app/stylesheets/screen.scss */
+/* line 210, ../../../app/stylesheets/screen.scss */
 #question_tag_list {
   width: 100%;
 }
 
-/* line 188, ../../../app/stylesheets/screen.scss */
+/* line 213, ../../../app/stylesheets/screen.scss */
 #new_comment {
   display: none;
 }
 
-/* line 191, ../../../app/stylesheets/screen.scss */
+/* line 216, ../../../app/stylesheets/screen.scss */
 .comments {
   padding: 10px 0;
   font-size: 12px;
   color: #666666;
 }
 
-/* line 196, ../../../app/stylesheets/screen.scss */
+/* line 221, ../../../app/stylesheets/screen.scss */
 .comment:first-child {
   margin-top: 0;
 }
 
-/* line 199, ../../../app/stylesheets/screen.scss */
+/* line 224, ../../../app/stylesheets/screen.scss */
 .comment {
   background: url(/images/comment.gif) no-repeat 0 4px;
   padding-left: 20px;
 }
 
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 229, ../../../app/stylesheets/screen.scss */
 .pagination {
   overflow: hidden;
   *zoom: 1;
   background: white;
   margin: 20px 0;
 }
-/* line 208, ../../../app/stylesheets/screen.scss */
+/* line 233, ../../../app/stylesheets/screen.scss */
 .pagination a, .pagination span, .pagination em {
   padding: .2em .5em;
   display: inline-block;
   margin-right: 1px;
 }
-/* line 213, ../../../app/stylesheets/screen.scss */
+/* line 238, ../../../app/stylesheets/screen.scss */
 .pagination span.disabled {
   color: #999;
   border: 1px solid #DDD;
 }
-/* line 217, ../../../app/stylesheets/screen.scss */
+/* line 242, ../../../app/stylesheets/screen.scss */
 .pagination em {
   font-weight: bold;
   background: #2E6AB1;
   color: white;
   border: 1px solid #2E6AB1;
 }
-/* line 223, ../../../app/stylesheets/screen.scss */
+/* line 248, ../../../app/stylesheets/screen.scss */
 .pagination a {
   text-decoration: none;
   color: #105CB6;
   border: 1px solid #9AAFE5;
 }
-/* line 228, ../../../app/stylesheets/screen.scss */
+/* line 253, ../../../app/stylesheets/screen.scss */
 .pagination a:hover, .pagination a:focus {
   color: #003;
   border-color: #003;
 }
-/* line 232, ../../../app/stylesheets/screen.scss */
+/* line 257, ../../../app/stylesheets/screen.scss */
 .pagination .page_info {
   background: #2E6AB1;
   color: white;
@@ -1325,7 +1370,7 @@ input[type="text"], input[type="password"] {
   margin-bottom: .3em;
   text-align: center;
 }
-/* line 239, ../../../app/stylesheets/screen.scss */
+/* line 264, ../../../app/stylesheets/screen.scss */
 .pagination .page_info b {
   color: #003;
   background: #6aa6ed;

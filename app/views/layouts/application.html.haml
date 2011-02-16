@@ -9,18 +9,22 @@
 	= javascript_include_tag :defaults, :cache => true
 	= csrf_meta_tag
 %body.two-col.bp
-	#container
-		#header
-			- if user_signed_in?
-				= link_to current_user.name, current_user
-				= link_to "Sign out", destroy_user_session_path
-			- else
-				= link_to "Sign up", new_user_registration_path
-				= link_to "Sign in", new_user_session_path
+	#header_band
+		#header_content
 			%ul#nav
 				%li= link_to_unless_current 'Questions', questions_path
 				%li= link_to_unless_current 'New Question', new_question_path
-			#notice= notice
+			%ul#user_nav
+				- if user_signed_in?
+					%li= link_to current_user.name, current_user
+					%li= link_to "Sign out", destroy_user_session_path
+				- else
+					%li= link_to "Sign up", new_user_registration_path
+					%li= link_to "Sign in", new_user_session_path
+	#container
+		#header
+			- if notice
+				#notice= notice
 			- if user_signed_in? and current_user.notifications.present?
 				#notify= render 'partials/notify'
 		#content
