@@ -9,7 +9,7 @@
   <% service.payment_type 1 %>
   <% service.notify_url notify_recharge_index_url %>
   <% service.return_url done_recharge_index_url %>
-  <% service.show_url recharge_url(:id => order.id) %>
+  <% service.show_url recharge_index_url %>
   <% service.sign %>
 <% end %>
 <%= button_to_function "Pay the order", "$($('#payment-form').get(0).utf8).remove();$('#payment-form').submit();" %>

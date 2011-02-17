@@ -45,7 +45,7 @@ class RechargeController < ApplicationController
     notification.acknowledge
     
     @order = current_user.records.find notification.out_trade_no
-    if notification.status == "TRADE_FINISHED" and @order.status == "pending"
+    if notification.trade_status == "TRADE_SUCCESS" and @order.status == "pending"
       @order.update_attribute(:status,"success")
       @order.user.update_attribute(:money, @order.user.money + notification.total_fee*100.to_i)
     end
@@ -53,7 +53,7 @@ class RechargeController < ApplicationController
   
   def done
     r = ActiveMerchant::Billing::Integrations::Alipay::Return.new(request.query_string)  
-    unless @result = r.success?  
+    unless @result = r.success?
       logger.warn(r.message)
     end  
   end
