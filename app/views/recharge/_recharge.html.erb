@@ -1,0 +1,15 @@
+<h1>Wait to pay: <%= order.amount.to_f/100 %></h1>
+<%= payment_service_for order.id, ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT, :service => :alipay, :html => { :id => 'payment-form', :method => :get } do |service| %>
+  <% service.service ActiveMerchant::Billing::Integrations::Alipay::Helper::CREATE_DIRECT_PAY_BY_USER %>
+  <% service.seller :email => ActiveMerchant::Billing::Integrations::Alipay::EMAIL %>
+  <% service.total_fee order.amount.to_f/100 %>
+  <% service.subject order.caption %>
+  <% service.body order.remark %>
+  <% service.charset "utf-8" %>
+  <% service.payment_type 1 %>
+  <% service.notify_url notify_recharge_index_url %>
+  <% service.return_url done_recharge_index_url %>
+  <% service.show_url recharge_url(:id => order.id) %>
+  <% service.sign %>
+<% end %>
+<%= button_to_function "Pay the order", "$($('#payment-form').get(0).utf8).remove();$('#payment-form').submit();" %>

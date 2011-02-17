@@ -1,0 +1,16 @@
+%h1="Current Money: #{current_user.money}"
+= link_to 'Recharge', new_recharge_url
+%table
+	%tbody
+		- @records.each do |record|
+			%tr
+				%td= record.id
+				%td= record.iotype ? 'in' : 'out'
+				%td= record.amount
+				%td= record.payee
+				%td= record.payee_id
+				%td= record.payer
+				%td= record.payer_id
+				%td= record.caption
+				%td= record.remark
+				%td= record.status

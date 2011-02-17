@@ -32,6 +32,7 @@ module Mayday
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
+    # for in-place-editing: jquery.jeditable.mini.js on_the_spot.js
     config.action_view.javascript_expansions[:defaults] = %w(jquery.min.js rails.js jquery-ui.min.js autocomplete-rails.js)
 
     # Configure the default encoding used in templates for Ruby 1.9.

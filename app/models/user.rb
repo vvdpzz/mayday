@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :message => "can't be blank"
   validates_uniqueness_of :name, :case_sensitive => false, :message => "must be unique"
   
+  include SentientUser
+  
   include Gravtastic
   gravtastic
   

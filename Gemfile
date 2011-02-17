@@ -14,6 +14,8 @@ gem 'haml'
 gem 'activemerchant'
 gem 'activemerchant_patch_for_china'
 gem 'will_paginate'
+gem 'sentient_user'
+gem 'on_the_spot'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
