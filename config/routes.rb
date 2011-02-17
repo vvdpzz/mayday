@@ -2,6 +2,10 @@ Mayday::Application.routes.draw do
   
   devise_for :users
   resources :users
+  
+  match "users/notify" => "users#notify"
+  match "users/done" => "users#done"
+  match "users/show" => "users#show"
 
   match "questions/tagged/:tag" => "questions#tagged", :via => "get", :as => :tagged
   match "questions/:id/answers/:answer_id/accept" => "questions#accept", :via => "get", :as => :accept

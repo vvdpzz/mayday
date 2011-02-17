@@ -1,0 +1,2 @@
+module RechargeHelper
+end

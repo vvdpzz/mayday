@@ -1,0 +1,16 @@
+<% payment_service_for 'payment code', ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT,
+                            :service => :alipay,
+                            :html => { :id => 'payment-form', :method => :get } do |service| %>
+  <% service.total_fee 0.02 %>
+  <% service.seller :email => ActiveMerchant::Billing::Integrations::Alipay::EMAIL %>
+  <% service.notify_url 'http://mayday.fm/questions' %>
+  <% service.return_url 'http://mayday.fm/questions/1' %>
+  <% service.show_url 'http://mayday.fm/questions/1' %>
+  <% service.body 'payment body' %>
+  <% service.charset "utf-8" %>
+  <% service.service ActiveMerchant::Billing::Integrations::Alipay::Helper::CREATE_DIRECT_PAY_BY_USER %>
+  <% service.payment_type 1 %>
+  <% service.subject 'payment subject' %>
+  <% service.sign %>
+<% end %>
+<%= button_to_function "Submit", "document.getElementById('payment-form').submit();" %>
