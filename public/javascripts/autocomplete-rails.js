@@ -44,7 +44,7 @@ $(document).ready(function(){
 			//e.delimiter = $(e).attr('data-delimiter') || null;
 			e.delimiter = $(e).attr('delimiter') || null;
 			function split( val ) {
-				return val.replace(/，/,',').split( e.delimiter );
+				return val.replace(/，\s*/,',').split(/,\s*/);
 			}
 			function extractLast( term ) {
 				return split( term ).pop();
