@@ -48,6 +48,6 @@ class RechargeController < ApplicationController
   def done
     r = ActiveMerchant::Billing::Integrations::Alipay::Return.new(request.query_string)
     @order = Record.find r.order
-    render :action => :show
+    redirect_to questions_url
   end
 end
