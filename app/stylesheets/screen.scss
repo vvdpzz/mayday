@@ -44,6 +44,15 @@ body.bp ul{list-style-type: none;padding-left:0;}
 	}
 }
 
+#logo a{
+	color:white;
+	font-size:x-large;
+	float:left;
+}
+#logo a:hover{
+	text-decoration:none;
+}
+
 #header{
 	margin-bottom:2em;
 	#notice{
@@ -60,9 +69,11 @@ body.bp ul{list-style-type: none;padding-left:0;}
 }
 
 ul#nav{
-	font-size:18px;
+	font-size:16px;
 	float:left;
-	@include inline-block-list(8px);
+	@include inline-block-list;
+	margin-left:24px;
+	padding-top:5px;
 	li a{
 		color:white;
 		padding:3px 12px;
@@ -76,10 +87,10 @@ ul#nav{
 ul#user_nav{
 	float:right;
 	@include inline-block-list;
-	margin-top:5px;
+	padding-top:8px;
 	li a{
 		color:white;
-		padding:0 1.5em;
+		padding:0 .5em;
 	}
 }
 
