@@ -1,9 +1,9 @@
 Mayday::Application.routes.draw do
   
   devise_for :users
-  resources :users
+  resources :users, :only => [:show]
   
-  resources :recharge do
+  resources :recharge, :except => [:edit, :update, :destroy] do
     collection do
       post :notify
       get :done

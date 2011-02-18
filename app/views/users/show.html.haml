@@ -1,0 +1,4 @@
+.section_header
+	%h2="#{@user.name} asked"
+#questions
+	= render :partial => 'partials/question', :collection => @questions

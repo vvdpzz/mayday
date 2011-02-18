@@ -14,3 +14,4 @@
 				%td= record.caption
 				%td= record.remark
 				%td= record.status
+				%td= link_to 'pay', recharge_url(:id => record.id) if record.status == 'pending' and record.caption == 'recharge'
