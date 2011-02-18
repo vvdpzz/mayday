@@ -46,10 +46,11 @@ class RechargeController < ApplicationController
     
     puts "OK I am in."
     
-    @order = current_user.records.find notification.out_trade_no
+    @order = Record.find notification.out_trade_no
     if notification.trade_status == "TRADE_SUCCESS" and @order.status == "pending"
       @order.update_attribute(:status,"success")
       @order.user.update_attribute(:money, @order.user.money + notification.total_fee*100.to_i)
+      redirect_to questions_url
     end
   end
   
