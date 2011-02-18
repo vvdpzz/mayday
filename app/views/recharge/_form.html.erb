@@ -1,4 +1,5 @@
 <%= form_tag({:controller => 'recharge', :action => 'create'}) do %>
+	<%= label_tag 'Amount ( cent )' %>
 	<%= text_field_tag :amount %>
-	<%= submit_tag %>
+	<%= submit_tag 'Recharge' %>
 <% end %>

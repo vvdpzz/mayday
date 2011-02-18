@@ -21,6 +21,7 @@
 			%ul#user_nav
 				- if user_signed_in?
 					%li= link_to current_user.name, current_user
+					%li= link_to "Recharge", recharge_index_url
 					%li= link_to "Sign out", destroy_user_session_path
 				- else
 					%li= link_to "Sign up", new_user_registration_path
