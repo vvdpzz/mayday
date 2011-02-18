@@ -9,7 +9,7 @@ module ActiveMerchant #:nodoc:
           include Sign
 
           def complete?
-            trade_status == "TRADE_SUCCESS"
+            trade_status == "TRADE_SUCCESS" or trade_status == "TRADE_FINISHED"
           end
           
           def pending?

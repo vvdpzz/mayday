@@ -9,7 +9,6 @@
   <% service.payment_type 1 %>
   <% service.notify_url url_for(:only_path => false, :action => 'notify') %>
   <% service.return_url url_for(:only_path => false, :action => 'done') %>
-  <% service.show_url url_for(:only_path => false, :action => 'show') %>
   <% service.sign %>
 <% end %>
 <%= button_to_function "Pay the order", "$($('#payment-form').get(0).utf8).remove();$('#payment-form').submit();" %>
