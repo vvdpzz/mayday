@@ -34,13 +34,14 @@ class RechargeController < ApplicationController
   end
   
   def notify
+    puts "Hello world Hello world Hello world Hello world Hello world."
     notification = ActiveMerchant::Billing::Integrations::Alipay::Notification.new(request.raw_post)
     render :text => "fail" unless notification.acknowledge
     
     @order = Record.find notification.out_trade_no
     if notification.complete? and @order.status == "pending"
       @order.update_attribute(:status,"success")
-      @order.user.update_attribute(:money, @order.user.money + notification.total_fee*100.to_i)
+      @order.user.update_attribute(:money, @order.user.money + (notification.total_fee.to_f*100).to_i)
       render :text => "success"
     end
   end
@@ -48,6 +49,10 @@ class RechargeController < ApplicationController
   def done
     r = ActiveMerchant::Billing::Integrations::Alipay::Return.new(request.query_string)
     @order = Record.find r.order
+    if params[:id]@order.status == "pending"
+      @order.update_attribute(:status, "success")
+      @order.user.update_attribute(:money, @order.user.money + (r.amount.to_f*100).to_i)
+    end
     redirect_to questions_url
   end
 end
