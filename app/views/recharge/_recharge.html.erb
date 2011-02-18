@@ -11,4 +11,4 @@
   <% service.return_url url_for(:only_path => false, :action => 'done') %>
   <% service.sign %>
 <% end %>
-<%= button_to_function "Pay the order", "$($('#payment-form').get(0).utf8).remove();$('#payment-form').submit();" %>
+<%= button_to_function "使用支付宝支付", "$($('#payment-form').get(0).utf8).remove();$('#payment-form').submit();" %>

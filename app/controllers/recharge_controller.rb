@@ -1,5 +1,5 @@
 class RechargeController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:notify]
   
   def index
     @records = current_user.records
@@ -52,6 +52,6 @@ class RechargeController < ApplicationController
       @order.update_attribute(:status, "success")
       @order.user.update_attribute(:money, @order.user.money + (r.amount.to_f*100).to_i)
     end
-    redirect_to recharge_index_url
+    redirect_to(recharge_index_url, :notice => "您已成功充值 #{(r.amount.to_f*100).to_i}分, 当前余额为 #{@order.user.money}分。")
   end
 end
