@@ -49,7 +49,7 @@ class RechargeController < ApplicationController
   def done
     r = ActiveMerchant::Billing::Integrations::Alipay::Return.new(request.query_string)
     @order = Record.find r.order
-    if params[:id]@order.status == "pending"
+    if params[:trade_status] == "TRADE_SUCCESS" and @order.status == "pending"
       @order.update_attribute(:status, "success")
       @order.user.update_attribute(:money, @order.user.money + (r.amount.to_f*100).to_i)
     end
