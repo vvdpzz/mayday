@@ -43,7 +43,7 @@ $(document).ready(function() {
         u = w
     };
 	$("#question_body").charCounter({
-	    min: 15,
+	    min: 5,
 	    max: 140,
 	    setIsValid: p
 	});
