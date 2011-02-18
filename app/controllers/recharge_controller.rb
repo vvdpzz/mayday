@@ -34,7 +34,7 @@ class RechargeController < ApplicationController
   end
   
   def notify
-    notification = ActiveMerchant::Billing::Integrations::Alipay::Notification.new(request.raw_post)
+    notification = ActiveMerchant::Billing::Integrations::Alipay::Notification.new(request.raw_body)
 
     # AlipayTxn.create(:notify_id => notification.notify_id, 
     #                      :total_fee => notification.total_fee, 
@@ -44,6 +44,8 @@ class RechargeController < ApplicationController
 
     notification.acknowledge
     
+    puts "OK I am in."
+    
     @order = current_user.records.find notification.out_trade_no
     if notification.trade_status == "TRADE_SUCCESS" and @order.status == "pending"
       @order.update_attribute(:status,"success")
@@ -52,9 +54,9 @@ class RechargeController < ApplicationController
   end
   
   def done
-    r = ActiveMerchant::Billing::Integrations::Alipay::Return.new(request.query_string)  
+    r = ActiveMerchant::Billing::Integrations::Alipay::Return.new(request.query_string)
     unless @result = r.success?
       logger.warn(r.message)
-    end  
+    end
   end
 end

@@ -6,7 +6,7 @@ Mayday::Application.routes.draw do
   resources :recharge do
     collection do
       post :notify
-      post :done
+      get :done
     end
   end
 
