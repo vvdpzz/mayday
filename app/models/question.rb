@@ -18,6 +18,8 @@ class Question < ActiveRecord::Base
   
   validate :could_modify_reward, :on => :update
   
+  validate :tags_count_must_within_one_to_five
+  
   scope :latest, order("created_at DESC")
   
   def editable_by?(user)
@@ -87,6 +89,14 @@ class Question < ActiveRecord::Base
       end
     else
       errors.add(:reward, "you can't decrease the reward. please undo modification.")
+    end
+  end
+  
+  def tags_count_must_within_one_to_five
+    if self.tag_list.count > 5
+      errors.add(:tag_list, "can not be more than 5 tags")
+    elsif self.tag_list.count == 0
+      errors.add(:tag_list, "must have 1 tag at least")
     end
   end
 

@@ -14,6 +14,6 @@ class Comment < ActiveRecord::Base
   belongs_to :user
   
   validates_presence_of :body, :message => "can't be blank"
-  validates_length_of :body, :minimum => 15
+  validates_length_of :body, :minimum => 5
   validates_length_of :body, :maximum => 140
 end

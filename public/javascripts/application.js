@@ -52,7 +52,7 @@ $(document).ready(function() {
 	    setIsValid: p
 	});
 	$(".new_comment textarea").charCounter({
-	    min: 15,
+	    min: 5,
 	    max: 140,
 	    setIsValid: p
 	});
