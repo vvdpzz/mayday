@@ -44,13 +44,14 @@ body.bp ul{list-style-type: none;padding-left:0;}
 	}
 }
 
-#logo a{
-	color:white;
-	font-size:x-large;
+#logo{
 	float:left;
-}
-#logo a:hover{
-	text-decoration:none;
+	a{
+		background:url(/images/mayday.png) no-repeat;
+		display:block;
+		width:161px;
+		height:42px;
+	}
 }
 
 #header{
@@ -73,7 +74,7 @@ ul#nav{
 	float:left;
 	@include inline-block-list;
 	margin-left:24px;
-	padding-top:5px;
+	padding-top:10px;
 	li a{
 		color:white;
 		padding:3px 12px;
@@ -87,7 +88,7 @@ ul#nav{
 ul#user_nav{
 	float:right;
 	@include inline-block-list;
-	padding-top:8px;
+	padding-top:12px;
 	li a{
 		color:white;
 		padding:0 .5em;
