@@ -65,6 +65,7 @@ class QuestionsController < ApplicationController
     
     @question.body = params[:question][:body]
     @question.more = params[:question][:more]
+    @question.tag_list = params[:question][:tag_list]
     @question.reward = params[:question][:reward]
     @question.anonymous = params[:question][:anonymous]
     @question.rendering
