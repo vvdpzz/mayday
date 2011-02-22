@@ -15,7 +15,6 @@
 @import "compass/utilities/lists/inline-block-list";
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/border-radius";
-@import "compass/css3/transition";
 
 // Import bluecloth
 @import "partials/bluecloth";
@@ -161,12 +160,6 @@ body.bp .section_header{
 				line-height: 18px;
 				a{
 					color: #2854BB;
-				}
-				a:hover{
-					color: #71A7D8;
-					@include transition-duration(0.5s);
-					@include transition-timing-function(ease-in);
-					text-decoration: none;
 				}
 			}
 			.answer{

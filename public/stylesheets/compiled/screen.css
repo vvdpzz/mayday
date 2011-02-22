@@ -994,38 +994,38 @@ pre {
   color: white;
 }
 
-/* line 31, ../../../app/stylesheets/screen.scss */
+/* line 30, ../../../app/stylesheets/screen.scss */
 body.bp a {
   color: #5f88ce;
   text-decoration: none;
 }
 
-/* line 32, ../../../app/stylesheets/screen.scss */
+/* line 31, ../../../app/stylesheets/screen.scss */
 body.bp a:hover {
   text-decoration: underline;
 }
 
-/* line 33, ../../../app/stylesheets/screen.scss */
+/* line 32, ../../../app/stylesheets/screen.scss */
 body.bp a:visited {
   color: #5f88ce;
 }
 
-/* line 34, ../../../app/stylesheets/screen.scss */
+/* line 33, ../../../app/stylesheets/screen.scss */
 body.bp {
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 }
 
-/* line 35, ../../../app/stylesheets/screen.scss */
+/* line 34, ../../../app/stylesheets/screen.scss */
 body.bp ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-/* line 37, ../../../app/stylesheets/screen.scss */
+/* line 36, ../../../app/stylesheets/screen.scss */
 #header_band {
   background-color: #195695;
 }
-/* line 39, ../../../app/stylesheets/screen.scss */
+/* line 38, ../../../app/stylesheets/screen.scss */
 #header_band #header_content {
   margin: 0px auto;
   padding: 7px 0px 9px;
@@ -1034,11 +1034,11 @@ body.bp ul {
   *zoom: 1;
 }
 
-/* line 47, ../../../app/stylesheets/screen.scss */
+/* line 46, ../../../app/stylesheets/screen.scss */
 #logo {
   float: left;
 }
-/* line 49, ../../../app/stylesheets/screen.scss */
+/* line 48, ../../../app/stylesheets/screen.scss */
 #logo a {
   background: url(/images/mayday.png) no-repeat;
   display: block;
@@ -1046,25 +1046,25 @@ body.bp ul {
   height: 42px;
 }
 
-/* line 57, ../../../app/stylesheets/screen.scss */
+/* line 56, ../../../app/stylesheets/screen.scss */
 #header {
   margin-bottom: 2em;
 }
-/* line 59, ../../../app/stylesheets/screen.scss */
+/* line 58, ../../../app/stylesheets/screen.scss */
 #header #notice {
   background-color: #FFF8CC;
   border: 1px solid #FFE222;
   padding: 8px;
   margin: 10px 0;
 }
-/* line 65, ../../../app/stylesheets/screen.scss */
+/* line 64, ../../../app/stylesheets/screen.scss */
 #header #notify {
   background-color: #EBF2FC;
   border: 1px solid #CDDCF9;
   padding: 8px;
 }
 
-/* line 72, ../../../app/stylesheets/screen.scss */
+/* line 71, ../../../app/stylesheets/screen.scss */
 ul#nav {
   font-size: 16px;
   float: left;
@@ -1093,12 +1093,12 @@ ul#nav li {
 ul#nav li {
   *display: inline;
 }
-/* line 78, ../../../app/stylesheets/screen.scss */
+/* line 77, ../../../app/stylesheets/screen.scss */
 ul#nav li a {
   color: white;
   padding: 3px 12px;
 }
-/* line 82, ../../../app/stylesheets/screen.scss */
+/* line 81, ../../../app/stylesheets/screen.scss */
 ul#nav li a:hover, ul#nav li a.current {
   background-color: #164673;
   -moz-border-radius: 15px;
@@ -1110,7 +1110,7 @@ ul#nav li a:hover, ul#nav li a.current {
   text-decoration: none;
 }
 
-/* line 88, ../../../app/stylesheets/screen.scss */
+/* line 87, ../../../app/stylesheets/screen.scss */
 ul#user_nav {
   float: right;
   margin: 0;
@@ -1137,13 +1137,13 @@ ul#user_nav li {
 ul#user_nav li {
   *display: inline;
 }
-/* line 92, ../../../app/stylesheets/screen.scss */
+/* line 91, ../../../app/stylesheets/screen.scss */
 ul#user_nav li a {
   color: white;
   padding: 0 .5em;
 }
 
-/* line 98, ../../../app/stylesheets/screen.scss */
+/* line 97, ../../../app/stylesheets/screen.scss */
 #new_question, #new_answer, .edit_question, .edit_answer, #new_brainstorm, .edit_brainstorm {
   padding: 1em;
   border: 1px solid #E4E4E4;
@@ -1160,21 +1160,21 @@ ul#user_nav li a {
   box-sizing: border-box;
 }
 
-/* line 106, ../../../app/stylesheets/screen.scss */
+/* line 105, ../../../app/stylesheets/screen.scss */
 #new_brainstorm {
   margin-bottom: 30px;
 }
 
-/* line 112, ../../../app/stylesheets/screen.scss */
+/* line 111, ../../../app/stylesheets/screen.scss */
 #brainstorms .brainstorm p:last-child {
   margin-bottom: 0;
 }
 
-/* line 118, ../../../app/stylesheets/screen.scss */
+/* line 117, ../../../app/stylesheets/screen.scss */
 body.bp .section_header {
   border-bottom: 1px solid #ccdcef;
 }
-/* line 120, ../../../app/stylesheets/screen.scss */
+/* line 119, ../../../app/stylesheets/screen.scss */
 body.bp .section_header h2 {
   color: #383529;
   font-size: 18px;
@@ -1182,12 +1182,12 @@ body.bp .section_header h2 {
   margin-bottom: 0px;
 }
 
-/* line 129, ../../../app/stylesheets/screen.scss */
+/* line 128, ../../../app/stylesheets/screen.scss */
 #questions .question {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 131, ../../../app/stylesheets/screen.scss */
+/* line 130, ../../../app/stylesheets/screen.scss */
 #questions .question .stats {
   display: inline;
   float: left;
@@ -1200,31 +1200,31 @@ body.bp .section_header h2 {
 * html #questions .question .stats {
   overflow-x: hidden;
 }
-/* line 136, ../../../app/stylesheets/screen.scss */
+/* line 135, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt, #questions .question .stats .ans {
   line-height: 18px;
 }
-/* line 139, ../../../app/stylesheets/screen.scss */
+/* line 138, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt {
   color: #AAA;
 }
-/* line 141, ../../../app/stylesheets/screen.scss */
+/* line 140, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt .count {
   font-size: 24px;
 }
-/* line 145, ../../../app/stylesheets/screen.scss */
+/* line 144, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .unanswered {
   color: #dd2200;
 }
-/* line 148, ../../../app/stylesheets/screen.scss */
+/* line 147, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .answered {
   color: #f29905;
 }
-/* line 151, ../../../app/stylesheets/screen.scss */
+/* line 150, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .accepted {
   color: #4f8a32;
 }
-/* line 155, ../../../app/stylesheets/screen.scss */
+/* line 154, ../../../app/stylesheets/screen.scss */
 #questions .question .summary {
   display: inline;
   float: left;
@@ -1235,102 +1235,89 @@ body.bp .section_header h2 {
 * html #questions .question .summary {
   overflow-x: hidden;
 }
-/* line 158, ../../../app/stylesheets/screen.scss */
+/* line 157, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 162, ../../../app/stylesheets/screen.scss */
+/* line 161, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 a {
   color: #2854BB;
 }
-/* line 165, ../../../app/stylesheets/screen.scss */
-#questions .question .summary h3 a:hover {
-  color: #71A7D8;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-  text-decoration: none;
-}
-/* line 173, ../../../app/stylesheets/screen.scss */
+/* line 166, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer h3 {
   color: #666;
 }
-/* line 176, ../../../app/stylesheets/screen.scss */
+/* line 169, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer .excerpt {
   color: #666;
   font-size: 13px;
   line-height: 16px;
 }
 
-/* line 187, ../../../app/stylesheets/screen.scss */
+/* line 180, ../../../app/stylesheets/screen.scss */
 .question h2 p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
 }
-/* line 193, ../../../app/stylesheets/screen.scss */
+/* line 186, ../../../app/stylesheets/screen.scss */
 .question .article {
   font-size: 14px;
 }
 
-/* line 197, ../../../app/stylesheets/screen.scss */
+/* line 190, ../../../app/stylesheets/screen.scss */
 #questions .question, #answers .answer, #brainstorms .brainstorm {
   padding: 10px 0px;
   border-bottom: 1px solid #ccdcef;
 }
 
-/* line 201, ../../../app/stylesheets/screen.scss */
+/* line 194, ../../../app/stylesheets/screen.scss */
 .status, .links {
   color: #aaa;
   padding: 4px 0;
 }
 
-/* line 205, ../../../app/stylesheets/screen.scss */
+/* line 198, ../../../app/stylesheets/screen.scss */
 #answers {
   margin-top: 50px;
 }
-/* line 208, ../../../app/stylesheets/screen.scss */
+/* line 201, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner {
   border-left: 3px solid white;
   padding-left: 8px;
 }
-/* line 211, ../../../app/stylesheets/screen.scss */
+/* line 204, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner .article {
   font-size: 14px;
 }
-/* line 215, ../../../app/stylesheets/screen.scss */
+/* line 208, ../../../app/stylesheets/screen.scss */
 #answers .answer .correct {
   border-left: 3px solid #4f8a32;
 }
-/* line 219, ../../../app/stylesheets/screen.scss */
+/* line 212, ../../../app/stylesheets/screen.scss */
 #answers > h2 {
   margin: .75em 0;
 }
 
-/* line 223, ../../../app/stylesheets/screen.scss */
+/* line 216, ../../../app/stylesheets/screen.scss */
 .field {
   padding-bottom: 8px;
 }
 
-/* line 226, ../../../app/stylesheets/screen.scss */
+/* line 219, ../../../app/stylesheets/screen.scss */
 #new_comment .field {
   padding: 2px;
 }
 
-/* line 229, ../../../app/stylesheets/screen.scss */
+/* line 222, ../../../app/stylesheets/screen.scss */
 textarea {
   height: 9em;
   width: 100%;
 }
 
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 226, ../../../app/stylesheets/screen.scss */
 textarea, input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
   -moz-box-sizing: border-box;
@@ -1341,75 +1328,75 @@ textarea, input[type="text"], input[type="password"] {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-/* line 239, ../../../app/stylesheets/screen.scss */
+/* line 232, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
 }
 
-/* line 242, ../../../app/stylesheets/screen.scss */
+/* line 235, ../../../app/stylesheets/screen.scss */
 #question_tag_list {
   width: 100%;
 }
 
-/* line 245, ../../../app/stylesheets/screen.scss */
+/* line 238, ../../../app/stylesheets/screen.scss */
 #new_comment {
   display: none;
 }
 
-/* line 248, ../../../app/stylesheets/screen.scss */
+/* line 241, ../../../app/stylesheets/screen.scss */
 .comments {
   font-size: 12px;
   color: #666666;
 }
 
-/* line 252, ../../../app/stylesheets/screen.scss */
+/* line 245, ../../../app/stylesheets/screen.scss */
 .comment:first-child {
   margin-top: 8px;
 }
 
-/* line 255, ../../../app/stylesheets/screen.scss */
+/* line 248, ../../../app/stylesheets/screen.scss */
 .comment {
   background: url(/images/comment.gif) no-repeat 0 4px;
   padding-left: 20px;
 }
 
-/* line 260, ../../../app/stylesheets/screen.scss */
+/* line 253, ../../../app/stylesheets/screen.scss */
 .pagination {
   overflow: hidden;
   *zoom: 1;
   background: white;
   margin: 20px 0;
 }
-/* line 264, ../../../app/stylesheets/screen.scss */
+/* line 257, ../../../app/stylesheets/screen.scss */
 .pagination a, .pagination span, .pagination em {
   padding: .2em .5em;
   display: inline-block;
   margin-right: 1px;
 }
-/* line 269, ../../../app/stylesheets/screen.scss */
+/* line 262, ../../../app/stylesheets/screen.scss */
 .pagination span.disabled {
   color: #999;
   border: 1px solid #DDD;
 }
-/* line 273, ../../../app/stylesheets/screen.scss */
+/* line 266, ../../../app/stylesheets/screen.scss */
 .pagination em {
   font-weight: bold;
   background: #2E6AB1;
   color: white;
   border: 1px solid #2E6AB1;
 }
-/* line 279, ../../../app/stylesheets/screen.scss */
+/* line 272, ../../../app/stylesheets/screen.scss */
 .pagination a {
   text-decoration: none;
   color: #105CB6;
   border: 1px solid #9AAFE5;
 }
-/* line 284, ../../../app/stylesheets/screen.scss */
+/* line 277, ../../../app/stylesheets/screen.scss */
 .pagination a:hover, .pagination a:focus {
   color: #003;
   border-color: #003;
 }
-/* line 288, ../../../app/stylesheets/screen.scss */
+/* line 281, ../../../app/stylesheets/screen.scss */
 .pagination .page_info {
   background: #2E6AB1;
   color: white;
@@ -1418,7 +1405,7 @@ input[type="text"], input[type="password"] {
   margin-bottom: .3em;
   text-align: center;
 }
-/* line 295, ../../../app/stylesheets/screen.scss */
+/* line 288, ../../../app/stylesheets/screen.scss */
 .pagination .page_info b {
   color: #003;
   background: #6aa6ed;
