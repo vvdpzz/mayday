@@ -1,0 +1,5 @@
+= div_for brainstorm do
+	.status
+		%span.username= link_to brainstorm.user.name, brainstorm.user
+	.summary= safe_html brainstorm.body_markdown
+	.links= links_for_brainstorm(brainstorm)

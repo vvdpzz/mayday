@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
   has_many :answers
   has_many :records
   has_many :notifications
+  has_many :brainstorms
   
   after_create :register_gift
   

@@ -1,5 +1,7 @@
 Mayday::Application.routes.draw do
   
+  resources :brainstorms
+
   devise_for :users
   resources :users, :only => [:show]
   

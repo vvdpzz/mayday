@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110215125950) do
+ActiveRecord::Schema.define(:version => 20110222093551) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(:version => 20110215125950) do
 
   add_index "answers", ["question_id"], :name => "index_answers_on_question_id"
   add_index "answers", ["user_id"], :name => "index_answers_on_user_id"
+
+  create_table "brainstorms", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.text     "body_markdown"
+    t.boolean  "anonymous",     :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "brainstorms", ["user_id"], :name => "index_brainstorms_on_user_id"
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -68,6 +79,7 @@ ActiveRecord::Schema.define(:version => 20110215125950) do
     t.integer  "accepted_answer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "answers_count"
   end
 
   add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
@@ -121,6 +133,7 @@ ActiveRecord::Schema.define(:version => 20110215125950) do
     t.string   "name"
     t.string   "headline"
     t.integer  "money",                               :default => 0
+    t.integer  "brainstorms_count"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

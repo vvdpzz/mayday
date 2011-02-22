@@ -95,12 +95,24 @@ ul#user_nav{
 	}
 }
 
-#new_question, #new_answer, .edit_question, .edit_answer{
+#new_question, #new_answer, .edit_question, .edit_answer, #new_brainstorm, .edit_brainstorm{
 	padding:1em;
 	border: 1px solid #E4E4E4;
 	background-color: #F9F9F9;
 	@include border-radius;
 	@include box-sizing(border-box);
+}
+
+#new_brainstorm{
+	margin-bottom:30px;
+}
+
+#brainstorms{
+	.brainstorm{
+		p:last-child{
+			margin-bottom:0;
+		}
+	}
 }
 
 body.bp .section_header{
@@ -182,7 +194,7 @@ body.bp .section_header{
 		font-size:14px;
 	}
 }
-#questions .question, #answers .answer{
+#questions .question, #answers .answer, #brainstorms .brainstorm{
 	padding: 10px 0px;
 	border-bottom:1px solid $border_line;
 }
