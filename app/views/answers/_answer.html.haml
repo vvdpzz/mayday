@@ -8,7 +8,9 @@
         - @answer.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.text_area :body
+    #wmd-button-bar
+    = f.text_area :body, :id => 'wmd-input'
+    #wmd-preview
     %span.text-counter
   .actions
     = f.submit

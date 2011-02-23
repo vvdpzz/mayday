@@ -551,6 +551,183 @@ pre {
   overflow: auto;
 }
 
+/* line 6, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar {
+  width: 100%;
+  background-color: white;
+}
+
+/* line 10, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-row {
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 0px;
+  height: 20px;
+}
+
+/* line 19, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-spacer {
+  width: 1px;
+  height: 20px;
+  margin-left: 14px;
+  position: absolute;
+  background-color: Silver;
+  display: inline-block;
+  list-style: none;
+}
+
+/* line 29, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-button {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+  background-image: url(/images/wmd-buttons.png);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  display: inline-block;
+  list-style: none;
+}
+
+/* line 42, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-button > a {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+  display: inline-block;
+}
+
+/* sprite button slicing style information */
+/* line 54, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-bold-button {
+  left: 0px;
+  background-position: 0px 0;
+}
+
+/* line 55, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-italic-button {
+  left: 25px;
+  background-position: -20px 0;
+}
+
+/* line 56, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-spacer1 {
+  left: 50px;
+}
+
+/* line 57, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-link-button {
+  left: 75px;
+  background-position: -40px 0;
+}
+
+/* line 58, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-quote-button {
+  left: 100px;
+  background-position: -60px 0;
+}
+
+/* line 59, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-code-button {
+  left: 125px;
+  background-position: -80px 0;
+}
+
+/* line 60, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-image-button {
+  left: 150px;
+  background-position: -100px 0;
+}
+
+/* line 61, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-spacer2 {
+  left: 175px;
+}
+
+/* line 62, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-olist-button {
+  left: 200px;
+  background-position: -120px 0;
+}
+
+/* line 63, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-ulist-button {
+  left: 225px;
+  background-position: -140px 0;
+}
+
+/* line 64, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-heading-button {
+  left: 250px;
+  background-position: -160px 0;
+}
+
+/* line 65, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-hr-button {
+  left: 275px;
+  background-position: -180px 0;
+}
+
+/* line 66, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-spacer3 {
+  left: 300px;
+}
+
+/* line 67, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-undo-button {
+  left: 325px;
+  background-position: -200px 0;
+}
+
+/* line 68, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-redo-button {
+  left: 350px;
+  background-position: -220px 0;
+}
+
+/* line 69, ../../../app/stylesheets/partials/_bluecloth.scss */
+#wmd-button-bar #wmd-help-button {
+  right: 0px;
+  background-position: -240px 0;
+}
+
+/* line 72, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-prompt-background {
+  background-color: Black;
+}
+
+/* line 76, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-prompt-dialog {
+  border: 1px solid #999999;
+  background-color: #F5F5F5;
+}
+
+/* line 81, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-prompt-dialog > div {
+  font-size: 0.8em;
+  font-family: arial, helvetica, sans-serif;
+}
+
+/* line 87, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-prompt-dialog > form > input[type="text"] {
+  border: 1px solid #999999;
+  color: black;
+}
+
+/* line 92, ../../../app/stylesheets/partials/_bluecloth.scss */
+.wmd-prompt-dialog > form > input[type="button"] {
+  border: 1px solid #888888;
+  font-family: trebuchet MS, helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
 /* Layout helpers
 ----------------------------------*/
 /* line 3, ../../../app/stylesheets/partials/_jui.scss */
@@ -994,39 +1171,45 @@ pre {
   color: white;
 }
 
-/* line 30, ../../../app/stylesheets/screen.scss */
+/* line 28, ../../../app/stylesheets/screen.scss */
 body.bp a {
   color: #5f88ce;
   text-decoration: none;
 }
 
-/* line 31, ../../../app/stylesheets/screen.scss */
+/* line 29, ../../../app/stylesheets/screen.scss */
 body.bp a:hover {
   text-decoration: underline;
 }
 
-/* line 32, ../../../app/stylesheets/screen.scss */
+/* line 30, ../../../app/stylesheets/screen.scss */
 body.bp a:visited {
   color: #5f88ce;
 }
 
-/* line 33, ../../../app/stylesheets/screen.scss */
+/* line 31, ../../../app/stylesheets/screen.scss */
 body.bp {
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
 }
 
-/* line 34, ../../../app/stylesheets/screen.scss */
-body.bp ul {
+/* line 32, ../../../app/stylesheets/screen.scss */
+.ui-autocomplete {
+  list-style: none;
+}
+/* line 11, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.scss */
+.ui-autocomplete li {
+  list-style-image: none;
   list-style-type: none;
-  padding-left: 0;
+  margin-left: 0px;
 }
 
-/* line 36, ../../../app/stylesheets/screen.scss */
+/* line 35, ../../../app/stylesheets/screen.scss */
 #header_band {
   background-color: #195695;
 }
+
 /* line 38, ../../../app/stylesheets/screen.scss */
-#header_band #header_content {
+#header_content {
   margin: 0px auto;
   padding: 7px 0px 9px;
   width: 950px;
@@ -1034,11 +1217,11 @@ body.bp ul {
   *zoom: 1;
 }
 
-/* line 46, ../../../app/stylesheets/screen.scss */
+/* line 44, ../../../app/stylesheets/screen.scss */
 #logo {
   float: left;
 }
-/* line 48, ../../../app/stylesheets/screen.scss */
+/* line 46, ../../../app/stylesheets/screen.scss */
 #logo a {
   background: url(/images/mayday.png) no-repeat;
   display: block;
@@ -1046,25 +1229,28 @@ body.bp ul {
   height: 42px;
 }
 
-/* line 56, ../../../app/stylesheets/screen.scss */
+/* line 53, ../../../app/stylesheets/screen.scss */
 #header {
-  margin-bottom: 2em;
+  padding: 1em 0;
 }
-/* line 58, ../../../app/stylesheets/screen.scss */
-#header #notice {
+
+/* line 56, ../../../app/stylesheets/screen.scss */
+#notice {
   background-color: #FFF8CC;
   border: 1px solid #FFE222;
   padding: 8px;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
-/* line 64, ../../../app/stylesheets/screen.scss */
-#header #notify {
+
+/* line 62, ../../../app/stylesheets/screen.scss */
+#notify {
   background-color: #EBF2FC;
   border: 1px solid #CDDCF9;
   padding: 8px;
+  margin-bottom: 10px;
 }
 
-/* line 71, ../../../app/stylesheets/screen.scss */
+/* line 68, ../../../app/stylesheets/screen.scss */
 ul#nav {
   font-size: 16px;
   float: left;
@@ -1093,12 +1279,12 @@ ul#nav li {
 ul#nav li {
   *display: inline;
 }
-/* line 77, ../../../app/stylesheets/screen.scss */
+/* line 74, ../../../app/stylesheets/screen.scss */
 ul#nav li a {
   color: white;
   padding: 3px 12px;
 }
-/* line 81, ../../../app/stylesheets/screen.scss */
+/* line 78, ../../../app/stylesheets/screen.scss */
 ul#nav li a:hover, ul#nav li a.current {
   background-color: #164673;
   -moz-border-radius: 15px;
@@ -1110,7 +1296,7 @@ ul#nav li a:hover, ul#nav li a.current {
   text-decoration: none;
 }
 
-/* line 87, ../../../app/stylesheets/screen.scss */
+/* line 84, ../../../app/stylesheets/screen.scss */
 ul#user_nav {
   float: right;
   margin: 0;
@@ -1137,13 +1323,13 @@ ul#user_nav li {
 ul#user_nav li {
   *display: inline;
 }
-/* line 91, ../../../app/stylesheets/screen.scss */
+/* line 88, ../../../app/stylesheets/screen.scss */
 ul#user_nav li a {
   color: white;
   padding: 0 .5em;
 }
 
-/* line 97, ../../../app/stylesheets/screen.scss */
+/* line 93, ../../../app/stylesheets/screen.scss */
 #new_question, #new_answer, .edit_question, .edit_answer, #new_brainstorm, .edit_brainstorm {
   padding: 1em;
   border: 1px solid #E4E4E4;
@@ -1160,21 +1346,31 @@ ul#user_nav li a {
   box-sizing: border-box;
 }
 
-/* line 105, ../../../app/stylesheets/screen.scss */
+/* line 100, ../../../app/stylesheets/screen.scss */
+#question_body {
+  height: 5em;
+}
+
+/* line 103, ../../../app/stylesheets/screen.scss */
+#wmd-input {
+  height: 12em;
+}
+
+/* line 106, ../../../app/stylesheets/screen.scss */
 #new_brainstorm {
   margin-bottom: 30px;
 }
 
-/* line 111, ../../../app/stylesheets/screen.scss */
-#brainstorms .brainstorm p:last-child {
+/* line 109, ../../../app/stylesheets/screen.scss */
+.brainstorm p:last-child {
   margin-bottom: 0;
 }
 
-/* line 117, ../../../app/stylesheets/screen.scss */
+/* line 112, ../../../app/stylesheets/screen.scss */
 body.bp .section_header {
   border-bottom: 1px solid #ccdcef;
 }
-/* line 119, ../../../app/stylesheets/screen.scss */
+/* line 114, ../../../app/stylesheets/screen.scss */
 body.bp .section_header h2 {
   color: #383529;
   font-size: 18px;
@@ -1182,12 +1378,12 @@ body.bp .section_header h2 {
   margin-bottom: 0px;
 }
 
-/* line 128, ../../../app/stylesheets/screen.scss */
+/* line 122, ../../../app/stylesheets/screen.scss */
 #questions .question {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 130, ../../../app/stylesheets/screen.scss */
+/* line 124, ../../../app/stylesheets/screen.scss */
 #questions .question .stats {
   display: inline;
   float: left;
@@ -1200,31 +1396,31 @@ body.bp .section_header h2 {
 * html #questions .question .stats {
   overflow-x: hidden;
 }
-/* line 135, ../../../app/stylesheets/screen.scss */
+/* line 129, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt, #questions .question .stats .ans {
   line-height: 18px;
 }
-/* line 138, ../../../app/stylesheets/screen.scss */
+/* line 132, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt {
   color: #AAA;
 }
-/* line 140, ../../../app/stylesheets/screen.scss */
+/* line 134, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .amt .count {
   font-size: 24px;
 }
-/* line 144, ../../../app/stylesheets/screen.scss */
+/* line 138, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .unanswered {
   color: #dd2200;
 }
-/* line 147, ../../../app/stylesheets/screen.scss */
+/* line 141, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .answered {
   color: #f29905;
 }
-/* line 150, ../../../app/stylesheets/screen.scss */
+/* line 144, ../../../app/stylesheets/screen.scss */
 #questions .question .stats .accepted {
   color: #4f8a32;
 }
-/* line 154, ../../../app/stylesheets/screen.scss */
+/* line 148, ../../../app/stylesheets/screen.scss */
 #questions .question .summary {
   display: inline;
   float: left;
@@ -1235,90 +1431,90 @@ body.bp .section_header h2 {
 * html #questions .question .summary {
   overflow-x: hidden;
 }
-/* line 157, ../../../app/stylesheets/screen.scss */
+/* line 151, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 161, ../../../app/stylesheets/screen.scss */
+/* line 155, ../../../app/stylesheets/screen.scss */
 #questions .question .summary h3 a {
   color: #2854BB;
 }
-/* line 166, ../../../app/stylesheets/screen.scss */
+/* line 160, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer h3 {
   color: #666;
 }
-/* line 169, ../../../app/stylesheets/screen.scss */
+/* line 163, ../../../app/stylesheets/screen.scss */
 #questions .question .summary .answer .excerpt {
   color: #666;
   font-size: 13px;
   line-height: 16px;
 }
 
-/* line 180, ../../../app/stylesheets/screen.scss */
+/* line 174, ../../../app/stylesheets/screen.scss */
 .question h2 p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
 }
-/* line 186, ../../../app/stylesheets/screen.scss */
+/* line 180, ../../../app/stylesheets/screen.scss */
 .question .article {
   font-size: 14px;
 }
 
-/* line 190, ../../../app/stylesheets/screen.scss */
+/* line 184, ../../../app/stylesheets/screen.scss */
 #questions .question, #answers .answer, #brainstorms .brainstorm {
   padding: 10px 0px;
   border-bottom: 1px solid #ccdcef;
 }
 
-/* line 194, ../../../app/stylesheets/screen.scss */
+/* line 188, ../../../app/stylesheets/screen.scss */
 .status, .links {
   color: #aaa;
   padding: 4px 0;
 }
 
-/* line 198, ../../../app/stylesheets/screen.scss */
+/* line 192, ../../../app/stylesheets/screen.scss */
 #answers {
   margin-top: 50px;
 }
-/* line 201, ../../../app/stylesheets/screen.scss */
+/* line 195, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner {
   border-left: 3px solid white;
   padding-left: 8px;
 }
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 198, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner .article {
   font-size: 14px;
 }
-/* line 208, ../../../app/stylesheets/screen.scss */
+/* line 202, ../../../app/stylesheets/screen.scss */
 #answers .answer .correct {
   border-left: 3px solid #4f8a32;
 }
-/* line 212, ../../../app/stylesheets/screen.scss */
+/* line 206, ../../../app/stylesheets/screen.scss */
 #answers > h2 {
   margin: .75em 0;
 }
 
-/* line 216, ../../../app/stylesheets/screen.scss */
+/* line 210, ../../../app/stylesheets/screen.scss */
 .field {
   padding-bottom: 8px;
 }
 
-/* line 219, ../../../app/stylesheets/screen.scss */
+/* line 213, ../../../app/stylesheets/screen.scss */
 #new_comment .field {
   padding: 2px;
 }
 
-/* line 222, ../../../app/stylesheets/screen.scss */
+/* line 216, ../../../app/stylesheets/screen.scss */
 textarea {
   height: 9em;
   width: 100%;
 }
 
-/* line 226, ../../../app/stylesheets/screen.scss */
-textarea, input[type="text"], input[type="password"] {
+/* line 220, ../../../app/stylesheets/screen.scss */
+textarea, input[type="text"], input[type="password"], #wmd-preview {
   border: 1px solid #ccc;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1328,75 +1524,84 @@ textarea, input[type="text"], input[type="password"] {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-/* line 232, ../../../app/stylesheets/screen.scss */
+/* line 226, ../../../app/stylesheets/screen.scss */
+#wmd-preview {
+  border: 2px dashed #ccc;
+  padding: 2px;
+  background-color: white;
+  display: block;
+  line-height: 1.2;
+}
+
+/* line 233, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
 }
 
-/* line 235, ../../../app/stylesheets/screen.scss */
+/* line 236, ../../../app/stylesheets/screen.scss */
 #question_tag_list {
   width: 100%;
 }
 
-/* line 238, ../../../app/stylesheets/screen.scss */
+/* line 239, ../../../app/stylesheets/screen.scss */
 #new_comment {
   display: none;
 }
 
-/* line 241, ../../../app/stylesheets/screen.scss */
+/* line 242, ../../../app/stylesheets/screen.scss */
 .comments {
   font-size: 12px;
   color: #666666;
 }
 
-/* line 245, ../../../app/stylesheets/screen.scss */
+/* line 246, ../../../app/stylesheets/screen.scss */
 .comment:first-child {
   margin-top: 8px;
 }
 
-/* line 248, ../../../app/stylesheets/screen.scss */
+/* line 249, ../../../app/stylesheets/screen.scss */
 .comment {
   background: url(/images/comment.gif) no-repeat 0 4px;
   padding-left: 20px;
 }
 
-/* line 253, ../../../app/stylesheets/screen.scss */
+/* line 254, ../../../app/stylesheets/screen.scss */
 .pagination {
   overflow: hidden;
   *zoom: 1;
   background: white;
   margin: 20px 0;
 }
-/* line 257, ../../../app/stylesheets/screen.scss */
+/* line 258, ../../../app/stylesheets/screen.scss */
 .pagination a, .pagination span, .pagination em {
   padding: .2em .5em;
   display: inline-block;
   margin-right: 1px;
 }
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 263, ../../../app/stylesheets/screen.scss */
 .pagination span.disabled {
   color: #999;
   border: 1px solid #DDD;
 }
-/* line 266, ../../../app/stylesheets/screen.scss */
+/* line 267, ../../../app/stylesheets/screen.scss */
 .pagination em {
   font-weight: bold;
   background: #2E6AB1;
   color: white;
   border: 1px solid #2E6AB1;
 }
-/* line 272, ../../../app/stylesheets/screen.scss */
+/* line 273, ../../../app/stylesheets/screen.scss */
 .pagination a {
   text-decoration: none;
   color: #105CB6;
   border: 1px solid #9AAFE5;
 }
-/* line 277, ../../../app/stylesheets/screen.scss */
+/* line 278, ../../../app/stylesheets/screen.scss */
 .pagination a:hover, .pagination a:focus {
   color: #003;
   border-color: #003;
 }
-/* line 281, ../../../app/stylesheets/screen.scss */
+/* line 282, ../../../app/stylesheets/screen.scss */
 .pagination .page_info {
   background: #2E6AB1;
   color: white;
@@ -1405,7 +1610,7 @@ input[type="text"], input[type="password"] {
   margin-bottom: .3em;
   text-align: center;
 }
-/* line 288, ../../../app/stylesheets/screen.scss */
+/* line 289, ../../../app/stylesheets/screen.scss */
 .pagination .page_info b {
   color: #003;
   background: #6aa6ed;

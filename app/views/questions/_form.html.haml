@@ -11,7 +11,9 @@
     = f.text_area :body, :placeholder => "Write down your question in short"
     %span.text-counter
   .field
-    = f.text_area :more, :placeholder => "Add more detail to your question. Optional."
+    #wmd-button-bar
+    = f.text_area :more, :id => 'wmd-input', :placeholder => "Add more detail to your question. Optional."
+    #wmd-preview
   .field
     = f.text_field :tag_list, :autocomplete => autocomplete_tag_name_questions_path, :delimiter => ",", :class => "autocomplete", :placeholder => "At least one tag such as (Ruby, Linux, Deploy), max 5 tags"
   .field

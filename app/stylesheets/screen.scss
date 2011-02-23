@@ -19,30 +19,28 @@
 // Import bluecloth
 @import "partials/bluecloth";
 @import "partials/jui";
-
 $red: #D20;
 $yellow: #F29905;
 $green: #4F8A32;
 $link_normal: #5F88CE;
 $border_line: #CCDCEF;
 $mono_fonts: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
-
 body.bp a{color: $link_normal;text-decoration:none;}
 body.bp a:hover{text-decoration:underline;}
 body.bp a:visited{color: $link_normal;}
 body.bp{font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;}
-body.bp ul{list-style-type: none;padding-left:0;}
-
+.ui-autocomplete{
+	@include no-bullets;
+}
 #header_band{
 	background-color: #195695;
+}
 	#header_content{
 		margin: 0px auto;
 		padding: 7px 0px 9px;
 		width: 950px;
 		@include clearfix;
 	}
-}
-
 #logo{
 	float:left;
 	a{
@@ -52,22 +50,21 @@ body.bp ul{list-style-type: none;padding-left:0;}
 		height:42px;
 	}
 }
-
 #header{
-	margin-bottom:2em;
+	padding:1em 0;
+}
 	#notice{
 		background-color: #FFF8CC;
 		border: 1px solid #FFE222;
 		padding:8px;
-		margin:10px 0;
+		margin-bottom:10px;
 	}
 	#notify{
 		background-color:#EBF2FC;
 		border:1px solid #CDDCF9;
 		padding:8px;
+		margin-bottom:10px;
 	}
-}
-
 ul#nav{
 	font-size:16px;
 	float:left;
@@ -93,7 +90,6 @@ ul#user_nav{
 		padding:0 .5em;
 	}
 }
-
 #new_question, #new_answer, .edit_question, .edit_answer, #new_brainstorm, .edit_brainstorm{
 	padding:1em;
 	border: 1px solid #E4E4E4;
@@ -101,19 +97,18 @@ ul#user_nav{
 	@include border-radius;
 	@include box-sizing(border-box);
 }
-
+#question_body{
+	height:5em;
+}
+#wmd-input{
+	height:12em;
+}
 #new_brainstorm{
 	margin-bottom:30px;
 }
-
-#brainstorms{
-	.brainstorm{
-		p:last-child{
-			margin-bottom:0;
-		}
-	}
+.brainstorm p:last-child{
+	margin-bottom:0;
 }
-
 body.bp .section_header{
 	border-bottom: 1px solid $border_line;
 	h2{
@@ -123,7 +118,6 @@ body.bp .section_header{
 		margin-bottom: 0px;
 	}
 }
-
 #questions{
 	.question{
 		@include clearfix;
@@ -223,11 +217,18 @@ textarea{
 	height:9em;
 	width:100%;
 }
-textarea, input[type="text"], input[type="password"]{
+textarea, input[type="text"], input[type="password"], #wmd-preview{
 	border:1px solid #ccc;
 	@include box-sizing(border-box);
 	font-size:14px;
 	font-family: $mono_fonts;
+}
+#wmd-preview{
+	border:2px dashed #ccc;
+	padding:2px;
+	background-color:white;
+	display:block;
+	line-height:1.2;
 }
 input[type="text"], input[type="password"]{
 	padding:5px;
