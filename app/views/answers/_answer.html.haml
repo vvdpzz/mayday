@@ -9,8 +9,8 @@
           %li= msg
   .field
     #wmd-button-bar
-    = f.text_area :body, :id => 'wmd-input'
-    #wmd-preview
+    = f.text_area :body, :id => 'wmd-input', :class => 'answer_body'
     %span.text-counter
+    #wmd-preview
   .actions
     = f.submit
