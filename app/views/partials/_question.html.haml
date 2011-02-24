@@ -3,8 +3,9 @@
 		.amt
 			.count= question.history_max
 			.word amount
-		.ans{:class => "#{question.status}"}= pluralize(question.answers.count, "answer")
+		.ans{:class => "#{question.status}"}= pluralize(question.answers_count, "answer")
 	.summary
 		%h3= link_to question.excerpt, question
 		.status= question_links question
-		= render 'partials/last_answer', :answer => question.answers.last if question.answers.last.present?
+		.answer
+			= "#{question.answer_user} - #{question.last_answer}" if question.ans_user_id

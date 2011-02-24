@@ -1441,79 +1441,75 @@ body.bp .section_header h2 {
 #questions .question .summary h3 a {
   color: #2854BB;
 }
-/* line 160, ../../../app/stylesheets/screen.scss */
-#questions .question .summary .answer h3 {
-  color: #666;
-}
-/* line 163, ../../../app/stylesheets/screen.scss */
-#questions .question .summary .answer .excerpt {
+/* line 159, ../../../app/stylesheets/screen.scss */
+#questions .question .summary .answer {
   color: #666;
   font-size: 13px;
   line-height: 16px;
 }
 
-/* line 174, ../../../app/stylesheets/screen.scss */
+/* line 169, ../../../app/stylesheets/screen.scss */
 .question h2 p {
   margin: 0;
   font-size: 18px;
   line-height: 22px;
 }
-/* line 180, ../../../app/stylesheets/screen.scss */
+/* line 175, ../../../app/stylesheets/screen.scss */
 .question .article {
   font-size: 14px;
 }
 
-/* line 184, ../../../app/stylesheets/screen.scss */
+/* line 179, ../../../app/stylesheets/screen.scss */
 #questions .question, #answers .answer, #brainstorms .brainstorm {
   padding: 10px 0px;
   border-bottom: 1px solid #ccdcef;
 }
 
-/* line 188, ../../../app/stylesheets/screen.scss */
+/* line 183, ../../../app/stylesheets/screen.scss */
 .status, .links {
   color: #aaa;
   padding: 4px 0;
 }
 
-/* line 192, ../../../app/stylesheets/screen.scss */
+/* line 187, ../../../app/stylesheets/screen.scss */
 #answers {
   margin-top: 50px;
 }
-/* line 195, ../../../app/stylesheets/screen.scss */
+/* line 190, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner {
   border-left: 3px solid white;
   padding-left: 8px;
 }
-/* line 198, ../../../app/stylesheets/screen.scss */
+/* line 193, ../../../app/stylesheets/screen.scss */
 #answers .answer .inner .article {
   font-size: 14px;
 }
-/* line 202, ../../../app/stylesheets/screen.scss */
+/* line 197, ../../../app/stylesheets/screen.scss */
 #answers .answer .correct {
   border-left: 3px solid #4f8a32;
 }
-/* line 206, ../../../app/stylesheets/screen.scss */
+/* line 201, ../../../app/stylesheets/screen.scss */
 #answers > h2 {
   margin: .75em 0;
 }
 
-/* line 210, ../../../app/stylesheets/screen.scss */
+/* line 205, ../../../app/stylesheets/screen.scss */
 .field {
   padding-bottom: 8px;
 }
 
-/* line 213, ../../../app/stylesheets/screen.scss */
+/* line 208, ../../../app/stylesheets/screen.scss */
 #new_comment .field {
   padding: 2px;
 }
 
-/* line 216, ../../../app/stylesheets/screen.scss */
+/* line 211, ../../../app/stylesheets/screen.scss */
 textarea {
   height: 9em;
   width: 100%;
 }
 
-/* line 220, ../../../app/stylesheets/screen.scss */
+/* line 215, ../../../app/stylesheets/screen.scss */
 textarea, input[type="text"], input[type="password"], #wmd-preview {
   border: 1px solid #ccc;
   -moz-box-sizing: border-box;
@@ -1524,7 +1520,7 @@ textarea, input[type="text"], input[type="password"], #wmd-preview {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
-/* line 226, ../../../app/stylesheets/screen.scss */
+/* line 221, ../../../app/stylesheets/screen.scss */
 #wmd-preview {
   border: 2px dashed #ccc;
   padding: 2px;
@@ -1533,75 +1529,75 @@ textarea, input[type="text"], input[type="password"], #wmd-preview {
   line-height: 1.2;
 }
 
-/* line 233, ../../../app/stylesheets/screen.scss */
+/* line 228, ../../../app/stylesheets/screen.scss */
 input[type="text"], input[type="password"] {
   padding: 5px;
 }
 
-/* line 236, ../../../app/stylesheets/screen.scss */
+/* line 231, ../../../app/stylesheets/screen.scss */
 #question_tag_list {
   width: 100%;
 }
 
-/* line 239, ../../../app/stylesheets/screen.scss */
+/* line 234, ../../../app/stylesheets/screen.scss */
 #new_comment {
   display: none;
 }
 
-/* line 242, ../../../app/stylesheets/screen.scss */
+/* line 237, ../../../app/stylesheets/screen.scss */
 .comments {
   font-size: 12px;
   color: #666666;
 }
 
-/* line 246, ../../../app/stylesheets/screen.scss */
+/* line 241, ../../../app/stylesheets/screen.scss */
 .comment:first-child {
   margin-top: 8px;
 }
 
-/* line 249, ../../../app/stylesheets/screen.scss */
+/* line 244, ../../../app/stylesheets/screen.scss */
 .comment {
   background: url(/images/comment.gif) no-repeat 0 4px;
   padding-left: 20px;
 }
 
-/* line 254, ../../../app/stylesheets/screen.scss */
+/* line 249, ../../../app/stylesheets/screen.scss */
 .pagination {
   overflow: hidden;
   *zoom: 1;
   background: white;
   margin: 20px 0;
 }
-/* line 258, ../../../app/stylesheets/screen.scss */
+/* line 253, ../../../app/stylesheets/screen.scss */
 .pagination a, .pagination span, .pagination em {
   padding: .2em .5em;
   display: inline-block;
   margin-right: 1px;
 }
-/* line 263, ../../../app/stylesheets/screen.scss */
+/* line 258, ../../../app/stylesheets/screen.scss */
 .pagination span.disabled {
   color: #999;
   border: 1px solid #DDD;
 }
-/* line 267, ../../../app/stylesheets/screen.scss */
+/* line 262, ../../../app/stylesheets/screen.scss */
 .pagination em {
   font-weight: bold;
   background: #2E6AB1;
   color: white;
   border: 1px solid #2E6AB1;
 }
-/* line 273, ../../../app/stylesheets/screen.scss */
+/* line 268, ../../../app/stylesheets/screen.scss */
 .pagination a {
   text-decoration: none;
   color: #105CB6;
   border: 1px solid #9AAFE5;
 }
-/* line 278, ../../../app/stylesheets/screen.scss */
+/* line 273, ../../../app/stylesheets/screen.scss */
 .pagination a:hover, .pagination a:focus {
   color: #003;
   border-color: #003;
 }
-/* line 282, ../../../app/stylesheets/screen.scss */
+/* line 277, ../../../app/stylesheets/screen.scss */
 .pagination .page_info {
   background: #2E6AB1;
   color: white;
@@ -1610,7 +1606,7 @@ input[type="text"], input[type="password"] {
   margin-bottom: .3em;
   text-align: center;
 }
-/* line 289, ../../../app/stylesheets/screen.scss */
+/* line 284, ../../../app/stylesheets/screen.scss */
 .pagination .page_info b {
   color: #003;
   background: #6aa6ed;

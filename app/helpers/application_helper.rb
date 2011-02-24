@@ -14,7 +14,7 @@ module ApplicationHelper
   end
   
   def tags(question)
-    content_tag(:span, question.tag_list.map{|tag| link_to(tag, tagged_url(:tag => tag), :class => 'tag')}.to_sentence.html_safe, :class => 'tags').html_safe
+    content_tag(:span, question.topics.split(',').map{|tag| link_to(tag, tagged_url(:tag => tag), :class => 'tag')}.to_sentence.html_safe, :class => 'tags').html_safe
   end
   
   def question_links(question)

@@ -22,6 +22,11 @@ class AnswersController < ApplicationController
     @answer.question_id = @question.id
     
     @answer.rendering
+    
+    @question.ans_user_id = current_user.id
+    @question.answer_user = current_user.name
+    @question.last_answer = @answer.excerpt
+    @question.save
 
     respond_to do |format|
       if @answer.save

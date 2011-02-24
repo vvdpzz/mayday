@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   autocomplete :tag, :name, :full => true
 
   def index
-    @questions = Question.latest.paginate :page => params[:page]
+    @questions = Question.enough.latest.paginate :page => params[:page]
     # 
     # respond_to do |format|
     #   format.html
@@ -50,6 +50,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+        @question.update_attribute(:topics, @question.tag_list.to_s)
         @question.add_tags_to_user
         @question.charge
         format.html { redirect_to(@question, :notice => 'Question was successfully created.') }
@@ -72,6 +73,7 @@ class QuestionsController < ApplicationController
     
     respond_to do |format|
       if @question.save
+        @question.update_attribute(:topics, @question.tag_list.to_s)
         @question.add_tags_to_user
         @question.charge(reward = offset) if offset > 0
         format.html { redirect_to(@question, :notice => 'Question was successfully updated.') }

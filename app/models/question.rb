@@ -21,6 +21,7 @@ class Question < ActiveRecord::Base
   validate :tags_count_must_within_one_to_five
   
   scope :latest, order("created_at DESC")
+  scope :enough, lambda { {:select => "id, history_max, status, excerpt, topics, ans_user_id, answer_user, last_answer, answers_count, created_at"} }
   
   def editable_by?(user)
     user && (self.user == user)

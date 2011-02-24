@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110222093551) do
+ActiveRecord::Schema.define(:version => 20110224151857) do
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
@@ -80,6 +80,10 @@ ActiveRecord::Schema.define(:version => 20110222093551) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "answers_count"
+    t.integer  "ans_user_id"
+    t.string   "answer_user"
+    t.string   "last_answer"
+    t.string   "topics"
   end
 
   add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
