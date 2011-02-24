@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
     system = User.find_by_name('greedy')
     amount = APP_CONFIG['register_gift'].to_i
     system.update_attribute(:money, system.money - amount)
-    self.update_attribute(:money, amount)
+    self.update_attribute(:money, self.money + amount)
     Record.accounting(self, true,    amount, self, system, 'register_gift', 'register gift', 'success')
     Record.accounting(system, false, amount, self, system, 'register_gift', 'register gift', 'success')
   end

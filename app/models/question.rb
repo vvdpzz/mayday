@@ -35,15 +35,27 @@ class Question < ActiveRecord::Base
   end
   
   def charge(reward = self.reward)
-    deduction(self.user, APP_CONFIG['ask_charge'].to_i, reward, 0)
+    amount = APP_CONFIG['ask_charge'].to_i
+    give_money_to_system(amount)
+    deduction(self.user, amount, reward, 0)
+    accounting_ask_to_system
     accounting_ask
     accounting_reward reward
+  end
+  
+  def give_money_to_system(amount)
+    system = User.first
+    system.update_attribute(:money, system.money + amount)
   end
   
   def deduction(user, ask, reward, answer)
     sum = ask + reward + answer
     user.update_attribute(:money, user.money - sum)
     calc_amount_sum_and_update_history_max
+  end
+  
+  def accounting_ask_to_system
+    Record.accounting(User.first, true, APP_CONFIG['ask_charge'].to_i, self.user, User.first, 'ask', self.excerpt, 'success')
   end
   
   def accounting_ask
