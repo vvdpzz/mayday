@@ -89,7 +89,7 @@ class Question < ActiveRecord::Base
   end
 
   def afford_to_pay_reward
-    errors.add(:reward, "you do not have enough money to pay, please recharge.") if self.user.money < self.reward
+    errors.add(:reward, "you do not have enough money to pay, please recharge.") if self.user.money < self.reward + APP_CONFIG['ask_charge'].to_i
   end
   
   def could_modify_reward
