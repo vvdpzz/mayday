@@ -55,7 +55,7 @@ class Question < ActiveRecord::Base
   end
   
   def accounting_ask_to_system
-    Record.accounting(User.first, true, APP_CONFIG['ask_charge'].to_i, self.user, User.first, 'ask', self.excerpt, 'success')
+    Record.accounting(User.first, true, APP_CONFIG['ask_charge'].to_i, User.first, self.user, 'ask', self.excerpt, 'success')
   end
   
   def accounting_ask

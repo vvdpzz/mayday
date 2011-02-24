@@ -7,11 +7,18 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 # User.create(:name => "greedy", :email => "greedy@gmail.com", :password => "greedy", :password_confirmation => "greedy")
 # User.create(:name => "vvdpzz", :email => "vvdpzz@gmail.com", :password => "vvdpzz", :password_confirmation => "vvdpzz")
-records = Record.where("caption = ? AND user_id != ?", 'ask', 1)
-system = User.first
-system.update_attribute(:money, system.money - 100)
+records = Record.where("caption = ? AND user_id = ?", 'ask', 1)
 records.each do |record|
-  user = User.find record.user_id
-  system.update_attribute(:money, system.money + 10)
-  Record.accounting(system, true, 10, user, system, 'ask', record.remark, 'success')
+  payee = record.payer_id
+  payer = record.payee_id
+  record.update_attribute(:payee_id, payee)
+  record.update_attribute(:payer_id, payer)
 end
+# records = Record.where("caption = ? AND user_id != ?", 'ask', 1)
+# system = User.first
+# system.update_attribute(:money, system.money - 100)
+# records.each do |record|
+#   user = User.find record.user_id
+#   system.update_attribute(:money, system.money + 10)
+#   Record.accounting(system, true, 10, system, user, 'ask', record.remark, 'success')
+# end
