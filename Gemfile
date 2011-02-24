@@ -18,6 +18,7 @@ gem 'sentient_user'
 gem 'on_the_spot'
 gem 'sitemap_generator'
 gem 'whenever'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
