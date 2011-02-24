@@ -18,7 +18,7 @@ class Question < ActiveRecord::Base
   
   validate :could_modify_reward, :on => :update
   
-  validate :tags_count_must_within_one_to_five, :on => [:create, :update]
+  validate :tags_count_must_within_one_to_five
   
   scope :latest, order("created_at DESC")
   
