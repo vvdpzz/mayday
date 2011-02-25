@@ -7,7 +7,7 @@
 	= render "comments/comment", :commentable => @question
 #answers
 	.section_header
-		%h2= pluralize(@question.answers.count, "answer")
-	= render :partial => 'partials/answer', :collection => @question.answers
+		%h2= pluralize(@question.answers_count, "answer")
+	= render :partial => 'partials/answer', :collection => @answers
 	%h2 Add Answer
 	= render @answer = @question.answers.build

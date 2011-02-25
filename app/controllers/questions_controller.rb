@@ -18,7 +18,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find(params[:id])
+    @question = Question.find(params[:id], :select => "id, history_max, topics, body_markdown, more_markdown, answers_count, created_at")
+    @answers = @question.answers.find(:all, :select => "id, user_id, question_id, body_markdown, created_at")
     
     current_user.notifications.where(:able => @question.class.to_s, :able_id => @question.id).delete_all if current_user
     # 
