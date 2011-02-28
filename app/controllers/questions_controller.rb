@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   
   # can_edit_on_the_spot
   
-  before_filter :authenticate_user!, :except => [:index, :show, :tagged]
+  before_filter :authenticate_user!, :except => [:index, :show, :tagged, :unanswered]
   
   before_filter :find_my_question, :only => [:edit, :update, :destroy, :accept]
   
@@ -15,6 +15,10 @@ class QuestionsController < ApplicationController
     #   format.html
     #   format.xml  { render :xml => @questions }
     # end
+  end
+  
+  def unanswered
+    @questions = Question.enough.unanswered.latest.paginate :page => params[:page]
   end
 
   def show

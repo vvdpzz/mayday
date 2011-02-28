@@ -21,6 +21,9 @@
 					= link_to_unless_current 'Brainstorms', brainstorms_path do
 						= link_to 'Brainstorms', brainstorms_path, :class => 'current'
 				%li
+					= link_to_unless_current 'Unanswered', unanswered_path do
+						= link_to 'Unanswered', unanswered_path, :class => 'current'
+				%li
 					= link_to_unless_current 'New Question', new_question_path do
 						= link_to 'New Question', new_question_path, :class => 'current'
 			%ul#user_nav

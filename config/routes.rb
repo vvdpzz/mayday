@@ -13,6 +13,7 @@ Mayday::Application.routes.draw do
   end
 
   match "questions/tagged/:tag" => "questions#tagged", :via => "get", :as => :tagged
+  match "unanswered/" => "questions#unanswered", :via => "get", :as => :unanswered
   match "questions/:id/answers/:answer_id/accept" => "questions#accept", :via => "get", :as => :accept
   resources :questions do
     resources :answers, :except => [:index, :show]

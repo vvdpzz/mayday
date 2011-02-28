@@ -22,6 +22,7 @@ class Question < ActiveRecord::Base
   
   scope :latest, order("created_at DESC")
   scope :enough, lambda { {:select => "id, history_max, status, excerpt, topics, ans_user_id, answer_user, last_answer, answers_count, created_at"} }
+  scope :unanswered, lambda { where(["accepted_answer_id IS NULL"]) }
   
   def editable_by?(user)
     user && (self.user == user)
