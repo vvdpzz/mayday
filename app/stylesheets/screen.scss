@@ -288,6 +288,9 @@ input[type="text"], input[type="password"]{
 		}
 	}
 }
+#tags{
+	@include clearfix;
+}
 #tags a{
 	color:white;
 }

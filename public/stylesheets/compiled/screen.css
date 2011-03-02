@@ -1614,11 +1614,17 @@ input[type="text"], input[type="password"] {
 }
 
 /* line 291, ../../../app/stylesheets/screen.scss */
+#tags {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 294, ../../../app/stylesheets/screen.scss */
 #tags a {
   color: white;
 }
 
-/* line 294, ../../../app/stylesheets/screen.scss */
+/* line 297, ../../../app/stylesheets/screen.scss */
 .tag-anchor {
   float: left;
   background-color: #6A98D6;
