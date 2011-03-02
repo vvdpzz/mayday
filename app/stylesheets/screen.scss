@@ -288,3 +288,13 @@ input[type="text"], input[type="password"]{
 		}
 	}
 }
+#tags a{
+	color:white;
+}
+.tag-anchor{
+	float:left;
+	background-color: #6A98D6;
+	padding: 0.3em 1.4em;
+	margin:8px;
+	@include border-radius(3px);
+}

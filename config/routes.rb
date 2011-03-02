@@ -1,5 +1,7 @@
 Mayday::Application.routes.draw do
   
+  resources :tags, :except => [:show, :new, :create, :edit, :update, :destroy]
+
   resources :brainstorms
 
   devise_for :users

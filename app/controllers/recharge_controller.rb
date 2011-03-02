@@ -11,6 +11,7 @@ class RechargeController < ApplicationController
   def create
     user = current_user
     amount = params[:amount].to_i
+    amount = 1 if amount < 1
     order = user.records.build(
       :iotype => true,
       :amount => amount,
@@ -18,8 +19,8 @@ class RechargeController < ApplicationController
       :payee_id => user.id,
       :payer => user.class.to_s,
       :payer_id => user.id,
-      :caption => 'recharge',
-      :remark => "recharge #{amount}",
+      :caption => "#{user.name } 充值 #{amount}分",
+      :remark => "充值 #{amount}分",
       :status => 'pending'
     )
     if order.save

@@ -1612,3 +1612,22 @@ input[type="text"], input[type="password"] {
   background: #6aa6ed;
   padding: .1em .25em;
 }
+
+/* line 291, ../../../app/stylesheets/screen.scss */
+#tags a {
+  color: white;
+}
+
+/* line 294, ../../../app/stylesheets/screen.scss */
+.tag-anchor {
+  float: left;
+  background-color: #6A98D6;
+  padding: 0.3em 1.4em;
+  margin: 8px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}

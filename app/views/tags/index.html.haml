@@ -1,0 +1,6 @@
+.section_header
+	%h2 All Tags
+#tags
+	- @tags.each do |tag|
+		= link_to tag.name, tagged_url(:tag => tag.name), :class => 'tag-anchor'
+= will_paginate @tags
